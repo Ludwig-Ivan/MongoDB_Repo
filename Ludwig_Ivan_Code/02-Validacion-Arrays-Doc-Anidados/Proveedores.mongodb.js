@@ -5,7 +5,7 @@ db.createCollection('Proveedores', {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion de objeto proveedor',
-            required: ['_id', 'nombre', 'contacto_nombre', 'email', 'contrasena', 'tipo'],
+            required: ['nombre', 'contacto_nombre', 'email', 'contrasena', 'tipo'],
             properties: {
                 nombre: {
                     bsonType: 'string',
@@ -16,8 +16,14 @@ db.createCollection('Proveedores', {
                     description: 'Nombre de contacto del proveedor',
                 },
                 telefono: {
-                    bsonType: 'string',
-                    description: 'Numero de telefono del proveedor',
+                    bsonType: 'array',
+                    description: 'Numeros de telefono del proveedor',
+                    minItems: 1,
+                    maxItems: 3,
+                    items: {
+                        bsonType: 'string',
+                    },
+                    uniqueItems: true,
                 },
                 email: {
                     bsonType: 'string',
@@ -28,20 +34,30 @@ db.createCollection('Proveedores', {
                     description: 'Contrasena de la cuenta del proveedor',
                 },
                 direccion: {
-                    bsonType: 'string',
+                    bsonType: 'object',
                     description: 'Dirección física del proveedor, que puede ser útil para envíos',
-                },
-                ciudad: {
-                    bsonType: 'string',
-                    description: 'Ciudad del proveedor',
-                },
-                estado: {
-                    bsonType: 'string',
-                    description: 'Estado del que pertenece el proveedor',
-                },
-                cp: {
-                    bsonType: 'string',
-                    description: 'Codigo Postal de residencia del proveedor',
+                    properties: {
+                        calle: {
+                            bsonType: 'string',
+                            description: 'calle y numero de casa del proveedor',
+                        },
+                        colonia: {
+                            bsonType: 'string',
+                            description: 'colonia del proveedor',
+                        },
+                        ciudad: {
+                            bsonType: 'string',
+                            description: 'Ciudad del proveedor',
+                        },
+                        estado: {
+                            bsonType: 'string',
+                            description: 'Estado del que pertenece el proveedor',
+                        },
+                        cp: {
+                            bsonType: 'string',
+                            description: 'Codigo Postal de residencia del proveedor',
+                        },
+                    },
                 },
                 estado_proveedor: {
                     bsonType: 'bool',
