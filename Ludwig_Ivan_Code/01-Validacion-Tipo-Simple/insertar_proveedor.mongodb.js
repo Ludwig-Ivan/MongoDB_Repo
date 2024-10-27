@@ -1,5 +1,7 @@
+//? Usamos la base de datos Furniview
 use('Furniview');
 
+//? Seleccionamos la collecion Proveedores y insertamos el siguiente documento
 db.Proveedores.insertOne(
     {
         nombre: 'Ludwig Ivan Ortiz Sierra',

@@ -7,6 +7,12 @@ db.createCollection('Proveedores', {
             title: 'Validacion de objeto proveedor',
             required: ['nombre', 'contacto_nombre', 'email', 'contrasena', 'tipo'],
             properties: {
+                //? Se agrego el _id dado a que agregamos la propiedad additionPropierties y lo colocamos en false
+                //? Mongo coloca de forma automatica el objectId cuando identifica el campo.
+                //! Importante: Si additionPropierties esta activo (true), puede agregar el campo _id el mismo.
+                _id: {
+                    bsonType: 'objectId',
+                },
                 nombre: {
                     bsonType: 'string',
                     description: 'Nombre del proveedor (puede ser el nombre completo o algun alias)',
@@ -23,16 +29,17 @@ db.createCollection('Proveedores', {
                     items: {
                         bsonType: 'string',
                     },
-                    //? Define que los items sean unicos dentrod el arreglo (no repeticiones)
                     uniqueItems: true,
                 },
                 email: {
                     bsonType: 'string',
                     description: 'Correo electronico del proveedor para comunicacion con el',
+                    pattern: '^[A-Za-z\\d.-]{1,}[@][A-Za-z\\d.-]{1,}[.][A-Za-z\\d.-]{1,}$',
                 },
                 contrasena: {
                     bsonType: 'string',
                     description: 'Contrasena de la cuenta del proveedor',
+                    pattern: '^[A-Za-z0-9.]{8,255}$'
                 },
                 direccion: {
                     bsonType: 'object',
@@ -80,7 +87,26 @@ db.createCollection('Proveedores', {
                     description: 'Define el tipo de proveedor que se a registrado en la plataforma',
                     enum: ['Fabricante', 'Distribuidor', 'Mayorista'],
                 },
-            }
+            },
+            //? additionalProperties: false --> No puede MongoDB agregar atributos extras
+            //? additionalProperties: true --> Puede agregar MongoDB atributos extras
+            additionalProperties: false,
         }
     }
 })
+
+//? Crea un indice para el campo email
+//? Evita la generacion de duplicados
+
+db.Proveedores.createIndex(
+    { email: 1 },
+    { unique: true }
+)
+
+//? Crea un indice para el campo contact_name
+//? Evita la generacion de duplicados
+
+db.Proveedores.createIndex(
+    { contacto_nombre: 1 },
+    { unique: true },
+)

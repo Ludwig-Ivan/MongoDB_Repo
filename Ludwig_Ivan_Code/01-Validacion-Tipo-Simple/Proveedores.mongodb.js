@@ -1,11 +1,18 @@
+//? Usamos la base de datos Furniview
 use('Furniview');
 
+//? En la base de datos creamos la collecion Proveedores
 db.createCollection('Proveedores', {
+
+    //? Aqui esta el esquema validado, para nuestros campos
     validator: {
         $jsonSchema: {
+            //? Tipo de dato
             bsonType: 'object',
             title: 'Validacion de objeto proveedor',
+            //? Atributos requeridos
             required: ['_id', 'nombre', 'contacto_nombre', 'email', 'contrasena', 'tipo'],
+            //? Atributos de la coleccion
             properties: {
                 nombre: {
                     bsonType: 'string',

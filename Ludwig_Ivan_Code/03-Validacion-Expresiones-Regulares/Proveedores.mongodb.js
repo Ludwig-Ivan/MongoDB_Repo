@@ -28,11 +28,14 @@ db.createCollection('Proveedores', {
                 email: {
                     bsonType: 'string',
                     description: 'Correo electronico del proveedor para comunicacion con el',
+                    //? Patron de validacion que debe cumplir el email para poder insertar el documento
+                    //! Aqui se usan expresiones regulares
                     pattern: '^[A-Za-z\\d.-]{1,}[@][A-Za-z\\d.-]{1,}[.][A-Za-z\\d.-]{1,}$',
                 },
                 contrasena: {
                     bsonType: 'string',
                     description: 'Contrasena de la cuenta del proveedor',
+                    //? En base al patro puesto con ER, se valida que cumpla que sea mayor que 8, tenga numeros, mayuszulas, minusculas
                     pattern: '^[A-Za-z0-9.]{8,255}$'
                 },
                 direccion: {
