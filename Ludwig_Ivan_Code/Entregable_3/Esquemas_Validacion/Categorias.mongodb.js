@@ -17,7 +17,7 @@ db.createCollection('Categorias', {
                 },
                 estado: {
                     bsonType: 'bool',
-                    descripcion: 'Indica si la categoria esta activa/inactiva',
+                    description: 'Indica si la categoria esta activa/inactiva',
                 },
                 fecha_creacion: {
                     bsonType: 'date',
@@ -25,7 +25,7 @@ db.createCollection('Categorias', {
                 },
                 imagen_url: {
                     bsonType: 'string',
-                    descripcion: 'Link url de la imagen de la categoria correspondiente',
+                    description: 'Link url de la imagen de la categoria correspondiente',
                 },
                 id_categoria_padre: {
                     bsonType: 'objectId',
@@ -35,3 +35,8 @@ db.createCollection('Categorias', {
         }
     }
 })
+
+db.Categoria.createIndex(
+    { nombre: 1 },
+    { unique: true },
+);

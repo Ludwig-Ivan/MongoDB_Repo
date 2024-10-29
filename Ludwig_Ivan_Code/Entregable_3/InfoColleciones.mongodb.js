@@ -1,0 +1,3 @@
+use('Furniview');
+
+db.getCollectionNames()

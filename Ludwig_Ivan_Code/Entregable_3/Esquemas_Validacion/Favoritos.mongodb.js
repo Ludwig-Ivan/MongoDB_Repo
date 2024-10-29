@@ -5,7 +5,7 @@ db.createCollection('Favoritos', {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion objecto favoritos',
-            required: ['fecah_agregacion', 'usuario', 'producto'],
+            required: ['fecha_agregacion', 'usuario', 'producto'],
             properties: {
                 fecha_agregacion: {
                     bsonType: 'date',

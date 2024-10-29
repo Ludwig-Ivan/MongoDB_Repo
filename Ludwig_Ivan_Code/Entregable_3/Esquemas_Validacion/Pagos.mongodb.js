@@ -8,11 +8,11 @@ db.createCollection('Pagos', {
             required: ['monto_total', 'metodo', 'estado', 'referencia_pago', 'carrito'],
             properties: {
                 monto_total: {
-                    bsonType: 'double',
+                    oneOf: [{ bsonType: 'double' }, { bsonType: 'int' }],
                     description: 'Indica la cantidad total a pagar incluyendo ofertas, envio de los productos',
                 },
                 fecha_pago: {
-                    bsonType: 'date',
+                    oneOf: [{ bsonType: 'date' }, { bsonType: 'null' }],
                     description: 'Indica la fecha en la que se realizo el pago',
                 },
                 metodo: {
@@ -28,7 +28,7 @@ db.createCollection('Pagos', {
                     description: 'Numero de serie para referenciar el pago',
                 },
                 proveedor_pago: {
-                    enum: ['OXXO', 'PayPal', 'Aurrera'],
+                    enum: ['OXXO', 'PayPal', 'Aurrera', ''],
                     description: 'Indica que proveedor se utilizo para realizar el pago',
                 },
                 carrito: {
@@ -39,3 +39,8 @@ db.createCollection('Pagos', {
         },
     },
 });
+
+db.Pagos.createIndex(
+    { referencia_pago: 1 },
+    { unique: 1 },
+);

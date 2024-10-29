@@ -12,7 +12,7 @@ db.createCollection('Envios', {
                     description: 'Indica la fecha que se registra el envio',
                 },
                 fecha_entrega: {
-                    bsonType: 'date',
+                    oneOf: [{ bsonType: 'date' }, { bsonType: 'null' }],
                     description: 'Indica la fecha en la que se entregara el envio',
                 },
                 estado: {
@@ -24,7 +24,7 @@ db.createCollection('Envios', {
                     description: 'Indica el metodo en que se realizara el envio',
                 },
                 costo: {
-                    bsonType: 'double',
+                    oneOf: [{ bsonType: 'double' }, { bsonType: 'int' }],
                     description: 'Indica el costo del envio',
                 },
                 numero_seguimiento: {
@@ -32,7 +32,7 @@ db.createCollection('Envios', {
                     description: 'Referencia de la empaquetadora para rastreo del envio',
                 },
                 peso: {
-                    bsonType: 'double',
+                    oneOf: [{ bsonType: 'double' }, { bsonType: 'int' }],
                     description: 'Indica el peso de todo el paquete',
                 },
                 dimensiones: {
@@ -44,7 +44,7 @@ db.createCollection('Envios', {
                     description: 'Indica la cantidad de veces que se intento entregar el paquete',
                 },
                 fecha_cancelacion: {
-                    bsonType: 'date',
+                    oneOf: [{ bsonType: 'date' }, { bsonType: 'null' }],
                     description: 'Indica la fecha en la que se cancelo el envio',
                 },
                 compania_transporte: {
@@ -63,3 +63,9 @@ db.createCollection('Envios', {
         },
     },
 })
+
+
+db.Envios.createIndex(
+    { numero_seguimiento: 1 },
+    { unique: true },
+)

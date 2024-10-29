@@ -25,7 +25,7 @@ db.createCollection('Historial_Busqueda', {
                 },
                 producto: {
                     bsonType: 'objectId',
-                    description: 'Clave foranea que referencia al producto que fue seleccionado',
+                    description: 'Referencia al producto que fue seleccionado',
                 },
             },
         },

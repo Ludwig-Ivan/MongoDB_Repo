@@ -26,19 +26,22 @@ db.createCollection('Carrito', {
                 carrito_producto: {
                     bsonType: 'object',
                     description: 'Objecto de la lista de productos del carrito correspondiente',
-                    required: ['id_producto', 'cantidad', 'subtotal'],
-                    id_producto: {
-                        bsonType: 'objectId',
-                        description: 'Referencia al producto que se agrego al carrito',
-                    },
-                    cantidad: {
-                        bsonType: 'int',
-                        description: 'Indica la cantidad de productos en el carrito',
-                    },
-                    subtotal: {
-                        bsonType: 'double',
-                        description: 'Indica el subtotal generado del producto en el carrito'
-                    },
+                    required: ['producto', 'cantidad', 'subtotal'],
+                    properties: {
+                        producto: {
+                            bsonType: 'objectId',
+                            description: 'Referencia al producto que se agrego al carrito',
+                        },
+                        cantidad: {
+                            bsonType: 'int',
+                            description: 'Indica la cantidad de productos en el carrito',
+                        },
+                        subtotal: {
+                            bsonType: 'double',
+                            description: 'Indica el subtotal generado del producto en el carrito'
+                        },
+                    }
+
                 },
             },
         }

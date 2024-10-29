@@ -12,7 +12,7 @@ db.createCollection('Tickets_Soporte', {
                     description: 'Fecha de creacion del ticket',
                 },
                 estado: {
-                    enum: ['Abierto', 'Cerrado', 'En proceso', 'Cancelado'],
+                    enum: ['Abierto', 'Cerrado', 'En Proceso', 'Cancelado'],
                     description: 'Estado actual del ticket del usuario',
                 },
                 prioridad: {
@@ -28,7 +28,7 @@ db.createCollection('Tickets_Soporte', {
                     description: 'Describe mas a detalle la razon del ticket',
                 },
                 fecha_resolucion: {
-                    bsonType: 'date',
+                    oneOf: [{ bsonType: 'date' }, { bsonType: 'null' }],
                     description: 'Fecha y hora a la que se resolvio el ticket',
                 },
                 comentarios: {
