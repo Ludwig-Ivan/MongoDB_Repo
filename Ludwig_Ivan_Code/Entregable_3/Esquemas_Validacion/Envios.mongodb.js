@@ -5,7 +5,7 @@ db.createCollection('Envios', {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion del objecto envio',
-            required: [''],
+            required: ['fecha_envio', 'estado', 'metodo', 'costo', 'numero_seguimiento', 'compania_transporte', 'carrito', 'locacion'],
             properties: {
                 fecha_envio: {
                     bsonType: 'date',
@@ -57,7 +57,7 @@ db.createCollection('Envios', {
                 },
                 locacion: {
                     bsonType: 'objectId',
-                    description: 'Clave foranea que referencia a la locacion de entrega',
+                    description: 'Referencia a la locacion de entrega',
                 },
             },
         },

@@ -16,32 +16,36 @@ db.createCollection('Carrito', {
                     description: 'Indica el estado del actual carrito',
                 },
                 total: {
-                    bsonType: 'double',
+                    oneOf: [{ bsonType: 'double' }, { bsonType: 'int' }],
                     description: 'Indica el total de todos los productos del carrito',
                 },
-                id_usuario: {
+                usuario: {
                     bsonType: 'objectId',
                     description: 'Referencia al usuario que le pertenece el carrito',
                 },
                 carrito_producto: {
-                    bsonType: 'object',
-                    description: 'Objecto de la lista de productos del carrito correspondiente',
-                    required: ['producto', 'cantidad', 'subtotal'],
-                    properties: {
-                        producto: {
-                            bsonType: 'objectId',
-                            description: 'Referencia al producto que se agrego al carrito',
-                        },
-                        cantidad: {
-                            bsonType: 'int',
-                            description: 'Indica la cantidad de productos en el carrito',
-                        },
-                        subtotal: {
-                            bsonType: 'double',
-                            description: 'Indica el subtotal generado del producto en el carrito'
-                        },
-                    }
-
+                    bsonType: 'array',
+                    description: 'Array de la lista de productos del carrito correspondiente',
+                    minItems: 1,
+                    items: {
+                        bsonType: 'object',
+                        required: ['producto', 'cantidad', 'subtotal'],
+                        properties: {
+                            producto: {
+                                bsonType: 'objectId',
+                                description: 'Referencia al producto que se agrego al carrito',
+                            },
+                            cantidad: {
+                                bsonType: 'int',
+                                description: 'Indica la cantidad de productos en el carrito',
+                            },
+                            subtotal: {
+                                oneOf: [{ bsonType: 'double' }, { bsonType: 'int' }],
+                                description: 'Indica el subtotal generado del producto en el carrito'
+                            },
+                        }
+                    },
+                    uniqueItems: true,
                 },
             },
         }

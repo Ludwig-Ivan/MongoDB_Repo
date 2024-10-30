@@ -1,20 +1,35 @@
 use('Furniview');
 
-//db.Proveedores.find().count();
-//db.Carrito.find().count();
-//db.Categorias.find().count();
+const can_proveedores = db.Proveedores.find().count();
+console.log('Proveedores: ' + can_proveedores + ' registros');
+//db.Proveedores.deleteMany({});
 
-db.Envios.find().count();
+const can_carrito = db.Carrito.find().count();
+console.log('Carrito: ' + can_carrito + ' registros');
+//db.Carrito.deleteMany({});
+
+const can_categorias = db.Categorias.find().count();
+console.log('Categorias: ' + can_categorias + ' registros');
+//db.Categorias.deleteMany({});
+
+const can_envios = db.Envios.find().count();
+console.log('Envios: ' + can_envios + ' registros');
 //db.Envios.deleteMany({});
 
-//db.Favoritos.find().count();
+const can_favoritos = db.Favoritos.find().count();
+console.log('Favoritos: ' + can_favoritos + ' registros');
 //db.Favoritos.deleteMany({});
 
-//db.Historial_Busqueda.find().count();
+const can_historial = db.Historial_Busqueda.find().count();
+console.log('Historial: ' + can_historial + ' registros');
 //db.Historial_Busqueda.deleteMany({});
 
-//db.Pagos.find().count();
+const can_pagos = db.Pagos.find().count();
+console.log('Pagos: ' + can_pagos + ' registros');
 //db.Pagos.deleteMany({});
 
-//db.Tickets_Soporte.find().count();
+const can_tickets = db.Tickets_Soporte.find().count();
+console.log('Tickets: ' + can_tickets + ' registros');
 //db.Tickets_Soporte.deleteMany({});
+
+db.getCollectionNames()

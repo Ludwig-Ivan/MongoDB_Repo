@@ -24,19 +24,19 @@ db.createCollection('Categorias', {
                     description: 'Indica la fecha en la que se creo la categoria',
                 },
                 imagen_url: {
-                    bsonType: 'string',
+                    oneOf: [{ bsonType: 'string' }, { bsonType: 'null' }],
                     description: 'Link url de la imagen de la categoria correspondiente',
                 },
                 id_categoria_padre: {
-                    bsonType: 'objectId',
-                    description: 'Clave foranea auto referenciada para categorias hijo.',
+                    oneOf: [{ bsonType: 'objectId' }, { bsonType: 'null' }],
+                    description: 'Referenciada para categorias hijo.',
                 },
             }
         }
     }
 })
 
-db.Categoria.createIndex(
+db.Categorias.createIndex(
     { nombre: 1 },
     { unique: true },
 );
