@@ -115,9 +115,8 @@ db.runCommand({
                     description: 'Direccion URL de la imagen de perfil de usuario'
                 },
             },
+            //Se agrego la opcion de agregar datos extras
             additionalProperties: false,
         }
     }
 })
-
-// Se elimino la opcion del correo duplicado
