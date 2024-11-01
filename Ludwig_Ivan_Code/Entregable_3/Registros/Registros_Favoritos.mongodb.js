@@ -51,4 +51,54 @@ db.Favoritos.insertMany([
         usuario: ObjectId(),
         producto: ObjectId(),
     },
+    {
+        fecha_agregacion: new Date(),
+        usuario: ObjectId(),
+        producto: ObjectId(),
+    },
+    {
+        fecha_agregacion: new Date(),
+        usuario: ObjectId(),
+        producto: ObjectId(),
+    },
+    {
+        fecha_agregacion: new Date(),
+        usuario: ObjectId(),
+        producto: ObjectId(),
+    },
+    {
+        fecha_agregacion: new Date(),
+        usuario: ObjectId(),
+        producto: ObjectId(),
+    },
+    {
+        fecha_agregacion: new Date(),
+        usuario: ObjectId(),
+        producto: ObjectId(),
+    },
+    {
+        fecha_agregacion: new Date(),
+        usuario: ObjectId(),
+        producto: ObjectId(),
+    },
+    {
+        fecha_agregacion: new Date(),
+        usuario: ObjectId(),
+        producto: ObjectId(),
+    },
+    {
+        fecha_agregacion: new Date(),
+        usuario: ObjectId(),
+        producto: ObjectId(),
+    },
+    {
+        fecha_agregacion: new Date(),
+        usuario: ObjectId(),
+        producto: ObjectId(),
+    },
+    {
+        fecha_agregacion: new Date(),
+        usuario: ObjectId(),
+        producto: ObjectId(),
+    },
 ]);
