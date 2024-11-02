@@ -7,6 +7,9 @@ db.createCollection('Ofertas', {
             title: 'Validacion para el objeto ofertas',
             required: ['valor', 'codigo_promocional', 'limite_de_uso', 'productos', 'categorias', 'usuarios', 'proveedores'],
             properties: {
+                _id: {
+                    bsonType: 'objectId',
+                },
                 nombre: {
                     bsonType: 'string',
                     description: 'Nombre de la oferta',
@@ -20,7 +23,7 @@ db.createCollection('Ofertas', {
                     description: 'Tipo de oferta'
                 },
                 valor: {
-                    bsonType: 'double',
+                    oneOf: [{ bsonType: 'double' }, { bsonType: 'int' }],
                     description: 'Porcentaje (en decimales) de la oferta'
                 },
                 fecha_inicio:
@@ -84,6 +87,7 @@ db.createCollection('Ofertas', {
                     description: 'Id de las categorias a las que son aplicables',
                 },
             },
+            additionalProperties: false,
         }
     }
 });

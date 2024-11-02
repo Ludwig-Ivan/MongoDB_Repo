@@ -7,6 +7,9 @@ db.createCollection('Devoluciones', {
             title: 'Validacion para el objeto devoluciones',
             required: ['fecha', 'motivo','total', 'usuario', 'carrito','devolucion'],
             properties: {
+                _id: {
+                    bsonType: 'objectId',
+                },
                 fecha: {
                     bsonType: 'date',
                     description: 'Fecha de la devolucion',
@@ -55,6 +58,7 @@ db.createCollection('Devoluciones', {
                     uniqueItems: true,
                 },
             },
+            additionalProperties: false,
         }
     }
 });

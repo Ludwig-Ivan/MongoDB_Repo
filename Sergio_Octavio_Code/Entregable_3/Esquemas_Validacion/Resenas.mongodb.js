@@ -7,6 +7,9 @@ db.createCollection('Resenas', {
             title: 'Validacion para el objeto resenas',
             required: ['calificacion', 'usuario', 'producto'],
             properties: {
+                _id: {
+                    bsonType: 'objectId',
+                },
                 calificacion: {
                     bsonType: 'int',
                     description: 'Indica el puntaje de 1 a 5 del usuario acerca del producto',
@@ -26,6 +29,7 @@ db.createCollection('Resenas', {
                     description: 'Id del producto referenciado'
                 }
             },
+            additionalProperties: false,
         }
     }
 });

@@ -5,8 +5,11 @@ db.createCollection('Productos', {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion para el objeto productos',
-            required: ['nombre', 'precio', 'imagenURL', 'categorias', 'provedor'],
+            required: ['nombre', 'precio', 'imagenURL', 'categorias', 'proveedor'],
             properties: {
+                _id: {
+                    bsonType: 'objectId',
+                },
                 nombre: {
                     bsonType: 'string',
                     description: 'Indica el nombre de un producto',
@@ -56,7 +59,7 @@ db.createCollection('Productos', {
                     description: 'Promedio de valoracion del producto'
                 },
                 cantidad_valoraciones: {
-                    bsonType: 'string',
+                    bsonType: 'int',
                     description: 'Cantidad de resenas publicadas del producto'
                 },
                 tags: {
@@ -77,6 +80,7 @@ db.createCollection('Productos', {
                     description: 'Id del proveedor del producto'
                 }
             },
+            additionalProperties: false,
         }
     }
 });
