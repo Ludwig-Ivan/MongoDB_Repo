@@ -1,3 +1,0 @@
-use('Furniview');
-
-db.getCollectionNames()

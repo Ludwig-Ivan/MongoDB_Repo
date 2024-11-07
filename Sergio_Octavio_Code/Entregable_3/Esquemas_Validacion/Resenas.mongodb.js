@@ -1,18 +1,18 @@
 use('Furniview');
-
+//? Esquema de validacion correcto
 db.createCollection('Resenas', {
     validator: {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion para el objeto resenas',
-            required: ['calificacion', 'usuario', 'producto'],
+            required: ['_id', 'calificacion', 'usuario', 'producto'],
             properties: {
                 _id: {
                     bsonType: 'objectId',
                 },
                 calificacion: {
                     bsonType: 'int',
-                    description: 'Indica el puntaje de 1 a 5 del usuario acerca del producto',
+                    description: 'Indica el puntaje de 0 a 5 del usuario acerca del producto',
                 },
                 comentario: {
                     bsonType: 'string',

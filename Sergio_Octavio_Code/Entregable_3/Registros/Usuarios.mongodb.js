@@ -1,6 +1,5 @@
 use('Furniview')
-//TODO: Falta reacomodar la informacion de los ultimos 2 registros
-//TODO: Falta verificar que los registros se ingrese de manera correcta en la collecion
+//? Registros Listos
 db.Usuarios.insertMany([
   {
     _id: ObjectId('000000000000000000000000'),
@@ -8,6 +7,7 @@ db.Usuarios.insertMany([
     correo: "juan.perez@example.com",
     contrasena: "JuanPerez123",
     locaciones: {
+      _id: ObjectId(),
       nombre: "Casa",
       direccion: "Calle Falsa 123",
       ciudad: "Ciudad de México",
@@ -23,7 +23,7 @@ db.Usuarios.insertMany([
     telefono: ["+52 55 1234 5678", "+52 55 8765 4321"],
     fecha_registro: new Date("2024-01-01"),
     rol: "Cliente",
-    fecha_nacimiento: "1990-05-15",
+    fecha_nacimiento: new Date("1990-05-15"),
     CURP: "PEJU900515HDFRNS03",
     fecha_ultimo_acceso: new Date("2024-11-01"),
     foto_de_perfil: "https://example.com/perfil/juan.jpg"
@@ -34,6 +34,7 @@ db.Usuarios.insertMany([
     correo: "ana.lopez@example.com",
     contrasena: "AnaLopez456",
     locaciones: {
+      _id: ObjectId(),
       nombre: "Trabajo",
       direccion: "Avenida Siempre Viva 742",
       ciudad: "Guadalajara",
@@ -49,7 +50,7 @@ db.Usuarios.insertMany([
     telefono: ["+52 33 1234 5678"],
     fecha_registro: new Date("2024-02-15"),
     rol: "Cliente",
-    fecha_nacimiento: "1985-08-25",
+    fecha_nacimiento: new Date("1985-08-25"),
     CURP: "LOAN850825HGRLNR09",
     fecha_ultimo_acceso: new Date("2024-10-28"),
     foto_de_perfil: "https://example.com/perfil/ana.jpg"
@@ -60,6 +61,7 @@ db.Usuarios.insertMany([
     correo: "carlos.mendez@example.com",
     contrasena: "CarlosMendez789",
     locaciones: {
+      _id: ObjectId(),
       nombre: "Departamento",
       direccion: "Calle del Sol 456",
       ciudad: "Monterrey",
@@ -75,61 +77,63 @@ db.Usuarios.insertMany([
     telefono: ["+52 81 1234 5678", "+52 81 8765 4321"],
     fecha_registro: new Date("2024-03-10"),
     rol: "Administrador",
-    fecha_nacimiento: "1978-02-12",
+    fecha_nacimiento: new Date("1978-02-12"),
     CURP: "MECA780212HNLNRR02",
     fecha_ultimo_acceso: new Date("2024-10-30"),
     foto_de_perfil: "https://example.com/perfil/carlos.jpg"
   },
   {
     _id: ObjectId('000000000000000000000003'),
-    nombre: "Carlos Méndez",
-    correo: "carlos.mendez@example.com",
-    contrasena: "CarlosMendez789",
+    nombre: "María López",
+    correo: "maria.lopez@example.com",
+    contrasena: "MariaLopez456",
     locaciones: {
+      _id: ObjectId(),
       nombre: "Departamento",
-      direccion: "Calle del Sol 456",
-      ciudad: "Monterrey",
-      estado: "Nuevo León",
-      cp: "64000",
+      direccion: "Avenida Siempre Viva 742",
+      ciudad: "Guadalajara",
+      estado: "Jalisco",
+      cp: "44100",
       pais: "México",
-      telefono: ["+52 81 1234 5678"],
-      fecha_registro: new Date("2024-03-10"),
+      telefono: ["+52 33 1234 5678"],
+      fecha_registro: new Date("2024-02-15"),
       estado_locacion: true,
-      intrucciones_entrega: "Llamar al llegar",
+      intrucciones_entrega: "Tocar el timbre dos veces",
       predeterminada: true
     },
-    telefono: ["+52 81 1234 5678", "+52 81 8765 4321"],
-    fecha_registro: new Date("2024-03-10"),
-    rol: "Administrador",
-    fecha_nacimiento: "1978-02-12",
-    CURP: "MECA780212HNLNRR02",
-    fecha_ultimo_acceso: new Date("2024-10-30"),
-    foto_de_perfil: "https://example.com/perfil/carlos.jpg"
+    telefono: ["+52 33 1234 5678"],
+    fecha_registro: new Date("2024-02-15"),
+    rol: "Cliente",
+    fecha_nacimiento: new Date("1985-08-25"),
+    CURP: "LOMA850825MJCLMR05",
+    fecha_ultimo_acceso: new Date("2024-11-02"),
+    foto_de_perfil: "https://example.com/perfil/maria.jpg"
   },
   {
     _id: ObjectId('000000000000000000000004'),
-    nombre: "Carlos Méndez",
-    correo: "carlos.mendez@example.com",
-    contrasena: "CarlosMendez789",
+    nombre: "Carlos Ramírez",
+    correo: "carlos.ramirez@example.com",
+    contrasena: "CarlosR123",
     locaciones: {
-      nombre: "Departamento",
-      direccion: "Calle del Sol 456",
-      ciudad: "Monterrey",
-      estado: "Nuevo León",
-      cp: "64000",
+      _id: ObjectId(),
+      nombre: "Oficina",
+      direccion: "Blvd. de los Insurgentes 200",
+      ciudad: "Tijuana",
+      estado: "Baja California",
+      cp: "22000",
       pais: "México",
-      telefono: ["+52 81 1234 5678"],
+      telefono: ["+52 664 123 4567"],
       fecha_registro: new Date("2024-03-10"),
       estado_locacion: true,
-      intrucciones_entrega: "Llamar al llegar",
-      predeterminada: true
+      intrucciones_entrega: "Recepción del edificio",
+      predeterminada: false
     },
-    telefono: ["+52 81 1234 5678", "+52 81 8765 4321"],
+    telefono: ["+52 664 123 4567", "+52 664 987 6543"],
     fecha_registro: new Date("2024-03-10"),
-    rol: "Administrador",
-    fecha_nacimiento: "1978-02-12",
-    CURP: "MECA780212HNLNRR02",
-    fecha_ultimo_acceso: new Date("2024-10-30"),
+    rol: "Cliente",
+    fecha_nacimiento: new Date("1978-11-10"),
+    CURP: "RACA781110HBCMML03",
+    fecha_ultimo_acceso: new Date("2024-11-03"),
     foto_de_perfil: "https://example.com/perfil/carlos.jpg"
   },
 ]);

@@ -1,38 +1,38 @@
 use('Furniview');
-
+//? Esquema de validacion correcta
 db.createCollection('Usuarios', {
     validator: {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion de objeto usuario',
-            required: ['nombre', 'email', 'contrasena'],
+            required: ['_id', 'nombre', 'correo', 'contrasena'],
             properties: {
                 _id: {
                     bsonType: 'objectId',
                 },
-
                 nombre: {
                     bsonType: 'string',
                     description: 'Nombre del usuario (puede ser el nombre completo o algun alias)',
                 },
-
                 correo: {
                     bsonType: 'string',
                     description: 'Correo electronico del usuario',
                     pattern: '^[A-Za-z\\d.-]{1,}[@][A-Za-z\\d.-]{1,}[.][A-Za-z\\d.-]{1,}$',
                 },
-
                 contrasena: {
                     bsonType: 'string',
                     description: 'Contrasena de la cuenta del usuario',
-                    pattern: '^[A-Za-z0-9.]{8,255}$'
+                    pattern: '^[A-Za-z0-9.]{8,}$'
 
                 },
-
                 locaciones: {
                     bsonType: 'object',
                     description: 'Dirección del usuario',
+                    required: ['nombre', 'direccion', 'estado', 'cp', 'pais', 'estado_locacion', 'fecha_registro'],
                     properties: {
+                        _id: {
+                            bsonType: 'objectId',
+                        },
                         nombre: {
                             bsonType: 'string',
                             description: 'Nombre de la locacion'
@@ -79,8 +79,7 @@ db.createCollection('Usuarios', {
                             bsonType: 'string',
                             description: 'Indicaciones de entrega'
                         },
-                        predeterminada:
-                        {
+                        predeterminada: {
                             bsonType: 'bool'
                         }
                     },
@@ -102,13 +101,12 @@ db.createCollection('Usuarios', {
                 },
 
                 rol: {
-                    bsonType: 'string',
                     description: 'Tipo de rol de usuario ya sea cliente o administrador',
                     enum: ['Cliente', 'Administrador'],
                 },
 
                 fecha_nacimiento: {
-                    bsonType: 'string',
+                    bsonType: 'date',
                     description: 'Fecha de nacimiento del usuario',
                 },
 
@@ -134,6 +132,6 @@ db.createCollection('Usuarios', {
 })
 
 db.Usuarios.createIndex(
-    { email: 1 },
+    { correo: 1 },
     { unique: true }
 )

@@ -1,11 +1,11 @@
 use('Furniview');
-
+//? Esquema de validacion correcto
 db.createCollection('Productos', {
     validator: {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion para el objeto productos',
-            required: ['nombre', 'precio', 'imagenURL', 'categorias', 'proveedor'],
+            required: ['_id', 'nombre', 'precio', 'imagenURL', 'categorias', 'proveedor'],
             properties: {
                 _id: {
                     bsonType: 'objectId',
@@ -18,28 +18,23 @@ db.createCollection('Productos', {
                     bsonType: 'string',
                     description: 'Muestra la descripcion acerca de un producto',
                 },
-                precio:
-                {
+                precio: {
                     oneOf: [{ bsonType: 'double' }, { bsonType: 'int' }],
                     description: 'Precio del producto'
                 },
-                stock:
-                {
+                stock: {
                     bsonType: 'int',
                     description: 'Cantidad de producto que hay en existencia'
                 },
-                estado:
-                {
-                    bsonType: 'string'
+                estado: {
+                    enum: ['Activo', 'Inactivo', 'Agotado'],
                 },
-                fecha_de_creacion:
-                {
-                    oneOf: [{bsonType: 'date'},{bsonType: 'null'}],
+                fecha_de_creacion: {
+                    oneOf: [{ bsonType: 'date' }, { bsonType: 'null' }],
                     description: 'Fecha de creacion de la publicacion'
                 },
-                fecha_de_actualizacion:
-                {
-                    oneOf: [{bsonType: 'date'},{bsonType: 'null'}],
+                fecha_de_actualizacion: {
+                    oneOf: [{ bsonType: 'date' }, { bsonType: 'null' }],
                     description: 'Fecha de actualizacion de la publicacion'
                 },
                 imagenURL: {

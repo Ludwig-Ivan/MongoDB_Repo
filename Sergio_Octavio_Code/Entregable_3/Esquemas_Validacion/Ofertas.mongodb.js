@@ -1,11 +1,11 @@
 use('Furniview');
-
+//? Esquema de validacion correcto
 db.createCollection('Ofertas', {
     validator: {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion para el objeto ofertas',
-            required: ['valor', 'codigo_promocional', 'limite_de_uso', 'productos', 'categorias', 'usuarios', 'proveedores'],
+            required: ['_id', 'nombre', 'descripcion', 'tipo', 'estado', 'valor', 'productos', 'categorias', 'usuarios', 'proveedores'],
             properties: {
                 _id: {
                     bsonType: 'objectId',
@@ -28,16 +28,17 @@ db.createCollection('Ofertas', {
                 },
                 fecha_inicio:
                 {
-                    oneOf: [{bsonType: 'date'},{bsonType: 'null'}],
+                    oneOf: [{ bsonType: 'date' }, { bsonType: 'null' }],
                     description: 'Fecha de inicio de la oferta'
                 },
                 fecha_fin:
                 {
-                    oneOf: [{bsonType: 'date'},{bsonType: 'null'}],
+                    oneOf: [{ bsonType: 'date' }, { bsonType: 'null' }],
                     description: 'Fecha de finalizacion de la oferta'
                 },
                 estado: {
-                    bsonType: 'string'
+                    enum: ['Activa', 'Expirada', 'Suspendida'],
+                    description: 'Indica ele stado en el que se encuentra la oferta'
                 },
                 codigo_promocional:
                 {
@@ -59,7 +60,6 @@ db.createCollection('Ofertas', {
                 productos: {
                     bsonType: 'array',
                     description: 'Id de los productos aplicables',
-                    minItems: 1,
                     items: {
                         bsonType: 'objectId',
                     },
@@ -68,7 +68,6 @@ db.createCollection('Ofertas', {
                 categorias: {
                     bsonType: 'array',
                     description: 'Id de las categorias a las que son aplicables',
-                    minItems: 1,
                     items: {
                         bsonType: 'objectId',
                     },

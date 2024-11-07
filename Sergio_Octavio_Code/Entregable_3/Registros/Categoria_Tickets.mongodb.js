@@ -1,5 +1,5 @@
 use('Furniview')
-//TODO: Falta probar si las categorias se insertan de manera correcta en la collecion
+//? Los registros se insertan de manera correcta
 db.Categoria_Tickets.insertMany([
   {
     _id: ObjectId("000000000000000000000000"),

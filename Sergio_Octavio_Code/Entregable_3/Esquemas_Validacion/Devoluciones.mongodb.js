@@ -1,11 +1,11 @@
 use('Furniview');
-
+//? Esquema de validacion correcto
 db.createCollection('Devoluciones', {
     validator: {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion para el objeto devoluciones',
-            required: ['fecha', 'motivo','total', 'usuario', 'carrito','devolucion'],
+            required: ['_id', 'fecha', 'motivo', 'total', 'usuario', 'carrito', 'devolucion'],
             properties: {
                 _id: {
                     bsonType: 'objectId',
