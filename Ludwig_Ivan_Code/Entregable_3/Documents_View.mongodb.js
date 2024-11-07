@@ -24,4 +24,4 @@ console.log('Pagos: ' + can_pagos + ' registros');
 const can_tickets = db.Tickets_Soporte.find().count();
 console.log('Tickets: ' + can_tickets + ' registros');
 
-//db.getCollectionNames()
+db.getCollectionNames()

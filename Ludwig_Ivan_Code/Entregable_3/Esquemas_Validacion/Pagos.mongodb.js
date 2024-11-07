@@ -1,12 +1,15 @@
 use('Furniview');
-
+//? Esquema de Validacion Listo
 db.createCollection('Pagos', {
     validator: {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion de objecto pagos',
-            required: ['monto_total', 'metodo', 'estado', 'referencia_pago', 'carrito'],
+            required: ['_id', 'monto_total', 'metodo', 'estado', 'referencia_pago', 'carrito'],
             properties: {
+                _id: {
+                    bsonType: 'objectId',
+                },
                 monto_total: {
                     oneOf: [{ bsonType: 'double' }, { bsonType: 'int' }],
                     description: 'Indica la cantidad total a pagar incluyendo ofertas, envio de los productos',
@@ -36,6 +39,7 @@ db.createCollection('Pagos', {
                     description: 'Referencia al carrito correspondiente al que se le retribuira el pago',
                 },
             },
+            additionalProperties: false,
         },
     },
 });

@@ -1,7 +1,8 @@
 use('Furniview');
-
+//? Registros Listos
 db.Proveedores.insertMany([
     {
+        _id: ObjectId('000000000000000000000000'),
         nombre: 'Ludwig Ivan Ortiz Sierra',
         contacto_nombre: 'Ludwig Ivan',
         telefono: ['353-101-8343'],
@@ -21,6 +22,7 @@ db.Proveedores.insertMany([
         tipo: 'Fabricante',
     },
     {
+        _id: ObjectId('000000000000000000000001'),
         nombre: 'Sergio Octavio Cervantes Mujica',
         contacto_nombre: 'ElSeco',
         telefono: ['390-122-1232'],
@@ -40,6 +42,7 @@ db.Proveedores.insertMany([
         tipo: 'Mayorista',
     },
     {
+        _id: ObjectId('000000000000000000000002'),
         nombre: 'Daniel Villasenor',
         contacto_nombre: 'El Altisimo',
         telefono: ['564-234-1234'],
@@ -59,6 +62,7 @@ db.Proveedores.insertMany([
         tipo: 'Distribuidor',
     },
     {
+        _id: ObjectId('000000000000000000000003'),
         nombre: 'Jesus Alfonso Cuevas Avila',
         contacto_nombre: 'Poncho',
         telefono: ['938-234-234'],
@@ -78,6 +82,7 @@ db.Proveedores.insertMany([
         tipo: 'Mayorista',
     },
     {
+        _id: ObjectId('000000000000000000000004'),
         nombre: 'Emmanuel Saladana Alvarez',
         contacto_nombre: 'Manny',
         telefono: ['909-233-3423'],

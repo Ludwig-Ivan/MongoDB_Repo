@@ -1,12 +1,15 @@
 use('Furniview');
-
+//? Esquema de Validacion Listo
 db.createCollection('Carrito', {
     validator: {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion para el objeto carrito',
-            required: ['fecha_creacion', 'estado', 'id_usuario', 'carrito_producto', 'total'],
+            required: ['_id', 'fecha_creacion', 'estado', 'usuario', 'carrito_producto', 'total'],
             properties: {
+                _id: {
+                    bsonType: 'objectId'
+                },
                 fecha_creacion: {
                     bsonType: 'date',
                     description: 'Indica la fecha en la que se creo el carrito',
@@ -48,6 +51,7 @@ db.createCollection('Carrito', {
                     uniqueItems: true,
                 },
             },
+            additionalProperties: false,
         }
     }
 });

@@ -1,12 +1,15 @@
 use('Furniview');
-
+//? Esquema de validacion Listo
 db.createCollection('Categorias', {
     validator: {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion de objeto categorias',
-            required: ['nombre', 'estado', 'fecha_creacion', 'imagen_url'],
+            required: ['_id', 'nombre', 'estado', 'fecha_creacion', 'imagen_url'],
             properties: {
+                _id: {
+                    bsonType: 'objectId'
+                },
                 nombre: {
                     bsonType: 'string',
                     description: 'Nombre de la categoria',
@@ -31,7 +34,8 @@ db.createCollection('Categorias', {
                     oneOf: [{ bsonType: 'objectId' }, { bsonType: 'null' }],
                     description: 'Referenciada para categorias hijo.',
                 },
-            }
+            },
+            additionalProperties: false,
         }
     }
 })

@@ -1,20 +1,18 @@
 use('Furniview');
-
+//? Validacion Lista
 db.createCollection('Proveedores', {
     validator: {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion de objeto proveedor',
-            required: ['nombre', 'contacto_nombre', 'email', 'contrasena', 'tipo'],
+            required: ['_id', 'nombre', 'contacto_nombre', 'email', 'contrasena', 'tipo'],
             properties: {
                 //? Se agrego el _id dado a que agregamos la propiedad additionPropierties y lo colocamos en false
                 //? Mongo coloca de forma automatica el objectId cuando identifica el campo.
-                //! Importante: Si additionPropierties esta activo (true), puede agregar el campo _id el mismo.
-                /* 
+                //! Importante: Si additionPropierties esta activo (true), puede agregar el campo _id el mismo. 
                 _id: {
                     bsonType: 'objectId',
                 },
-                */
                 nombre: {
                     bsonType: 'string',
                     description: 'Nombre del proveedor (puede ser el nombre completo o algun alias)',
@@ -92,7 +90,7 @@ db.createCollection('Proveedores', {
             },
             //? additionalProperties: false --> No puede MongoDB agregar atributos extras
             //? additionalProperties: true --> Puede agregar MongoDB atributos extras
-            //* additionalProperties: false,
+            additionalProperties: false,
         }
     }
 })

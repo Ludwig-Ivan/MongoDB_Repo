@@ -1,12 +1,15 @@
 use('Furniview');
-
+//? Esquema de Validacion Listo
 db.createCollection('Envios', {
     validator: {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion del objecto envio',
-            required: ['fecha_envio', 'estado', 'metodo', 'costo', 'numero_seguimiento', 'compania_transporte', 'carrito', 'locacion'],
+            required: ['_id', 'fecha_envio', 'estado', 'metodo', 'costo', 'numero_seguimiento', 'compania_transporte', 'carrito', 'locacion'],
             properties: {
+                _id: {
+                    bsonType: 'objectId',
+                },
                 fecha_envio: {
                     bsonType: 'date',
                     description: 'Indica la fecha que se registra el envio',
@@ -60,6 +63,7 @@ db.createCollection('Envios', {
                     description: 'Referencia a la locacion de entrega',
                 },
             },
+            additionalProperties: false,
         },
     },
 })

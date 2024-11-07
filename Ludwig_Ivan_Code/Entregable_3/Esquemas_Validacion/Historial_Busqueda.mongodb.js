@@ -1,12 +1,15 @@
 use('Furniview');
-
+//? Esquema de Validacion Listo
 db.createCollection('Historial_Busqueda', {
     validator: {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion del objecto historial busqueda',
-            required: ['fecha_busqueda', 'cantidad_resultados', 'terminos', 'usuario'],
+            required: ['_id', 'fecha_busqueda', 'cantidad_resultados', 'terminos', 'usuario'],
             properties: {
+                _id: {
+                    bsonType: 'objectId',
+                },
                 fecha_busqueda: {
                     bsonType: 'date',
                     description: 'Fecha de Busqueda en base a los terminos correspondientes',
@@ -28,6 +31,7 @@ db.createCollection('Historial_Busqueda', {
                     description: 'Referencia al producto que fue seleccionado',
                 },
             },
+            additionalProperties: false,
         },
     },
 });

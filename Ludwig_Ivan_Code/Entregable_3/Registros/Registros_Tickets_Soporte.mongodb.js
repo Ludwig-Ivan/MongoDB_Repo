@@ -1,7 +1,8 @@
 use('Furniview');
-
+//? Estos registros ya estan listos
 db.Tickets_Soporte.insertMany([
     {
+        _id: ObjectId("000000000000000000000000"),
         fecha_creacion: new Date(2023, 11, 25, 10, 30, 0),
         estado: 'Abierto',
         prioridad: 'Alta',
@@ -12,10 +13,11 @@ db.Tickets_Soporte.insertMany([
         adjuntos: ['https://www.google.com/'],
         medio_contacto: 'Chat',
         calificacion: 5,
-        categoria: [ObjectId(), ObjectId()],
-        id_usuario: ObjectId()
+        categoria: [ObjectId("000000000000000000000000"), ObjectId("000000000000000000000001")],
+        id_usuario: ObjectId("000000000000000000000000")
     },
     {
+        _id: ObjectId("000000000000000000000001"),
         fecha_creacion: new Date(2023, 8, 12, 15, 45, 0),
         estado: 'Cerrado',
         prioridad: 'Media',
@@ -26,10 +28,11 @@ db.Tickets_Soporte.insertMany([
         adjuntos: ['https://www.imgur.com/'],
         medio_contacto: 'Correo',
         calificacion: 4,
-        categoria: [ObjectId(), ObjectId()],
-        id_usuario: ObjectId()
+        categoria: [ObjectId("000000000000000000000001"), ObjectId("000000000000000000000002")],
+        id_usuario: ObjectId("000000000000000000000001")
     },
     {
+        _id: ObjectId("000000000000000000000002"),
         fecha_creacion: new Date(2023, 5, 14, 9, 0, 0),
         estado: 'En Proceso',
         prioridad: 'Baja',
@@ -40,10 +43,11 @@ db.Tickets_Soporte.insertMany([
         adjuntos: [],
         medio_contacto: 'Teléfono',
         calificacion: 3,
-        categoria: [ObjectId(), ObjectId()],
-        id_usuario: ObjectId()
+        categoria: [ObjectId("000000000000000000000002"), ObjectId("000000000000000000000003")],
+        id_usuario: ObjectId("000000000000000000000002")
     },
     {
+        _id: ObjectId("000000000000000000000003"),
         fecha_creacion: new Date(2023, 10, 2, 14, 30, 0),
         estado: 'Abierto',
         prioridad: 'Alta',
@@ -54,10 +58,11 @@ db.Tickets_Soporte.insertMany([
         adjuntos: [],
         medio_contacto: 'Chat',
         calificacion: 5,
-        categoria: [ObjectId(), ObjectId()],
-        id_usuario: ObjectId()
+        categoria: [ObjectId("000000000000000000000003"), ObjectId("000000000000000000000004")],
+        id_usuario: ObjectId("000000000000000000000003")
     },
     {
+        _id: ObjectId("000000000000000000000004"),
         fecha_creacion: new Date(2023, 7, 25, 10, 30, 0),
         estado: 'Cerrado',
         prioridad: 'Alta',
@@ -68,10 +73,11 @@ db.Tickets_Soporte.insertMany([
         adjuntos: ['https://www.facturaejemplo.com/'],
         medio_contacto: 'Correo',
         calificacion: 5,
-        categoria: [ObjectId(), ObjectId()],
-        id_usuario: ObjectId()
+        categoria: [ObjectId("000000000000000000000000"), ObjectId("000000000000000000000002")],
+        id_usuario: ObjectId("000000000000000000000004")
     },
     {
+        _id: ObjectId("000000000000000000000005"),
         fecha_creacion: new Date(2023, 6, 15, 8, 30, 0),
         estado: 'En Proceso',
         prioridad: 'Media',
@@ -82,10 +88,11 @@ db.Tickets_Soporte.insertMany([
         adjuntos: [],
         medio_contacto: 'Teléfono',
         calificacion: 4,
-        categoria: [ObjectId(), ObjectId()],
-        id_usuario: ObjectId()
+        categoria: [ObjectId("000000000000000000000000"), ObjectId("000000000000000000000003")],
+        id_usuario: ObjectId("000000000000000000000000")
     },
     {
+        _id: ObjectId("000000000000000000000006"),
         fecha_creacion: new Date(2023, 4, 10, 11, 20, 0),
         estado: 'Cerrado',
         prioridad: 'Alta',
@@ -96,10 +103,11 @@ db.Tickets_Soporte.insertMany([
         adjuntos: ['https://www.soporteapp.com/'],
         medio_contacto: 'Chat',
         calificacion: 4,
-        categoria: [ObjectId(), ObjectId()],
-        id_usuario: ObjectId()
+        categoria: [ObjectId("000000000000000000000000"), ObjectId("000000000000000000000004")],
+        id_usuario: ObjectId("000000000000000000000001")
     },
     {
+        _id: ObjectId("000000000000000000000007"),
         fecha_creacion: new Date(2023, 11, 1, 17, 0, 0),
         estado: 'Abierto',
         prioridad: 'Baja',
@@ -110,10 +118,11 @@ db.Tickets_Soporte.insertMany([
         adjuntos: [],
         medio_contacto: 'Correo',
         calificacion: 3,
-        categoria: [ObjectId(), ObjectId()],
-        id_usuario: ObjectId()
+        categoria: [ObjectId("000000000000000000000001"), ObjectId("000000000000000000000002")],
+        id_usuario: ObjectId("000000000000000000000002")
     },
     {
+        _id: ObjectId("000000000000000000000008"),
         fecha_creacion: new Date(2023, 2, 5, 14, 10, 0),
         estado: 'Cerrado',
         prioridad: 'Media',
@@ -124,10 +133,11 @@ db.Tickets_Soporte.insertMany([
         adjuntos: [],
         medio_contacto: 'Teléfono',
         calificacion: 4,
-        categoria: [ObjectId(), ObjectId()],
-        id_usuario: ObjectId()
+        categoria: [ObjectId("000000000000000000000001"), ObjectId("000000000000000000000003")],
+        id_usuario: ObjectId("000000000000000000000003")
     },
     {
+        _id: ObjectId("000000000000000000000009"),
         fecha_creacion: new Date(2023, 9, 10, 18, 30, 0),
         estado: 'En Proceso',
         prioridad: 'Alta',
@@ -138,24 +148,11 @@ db.Tickets_Soporte.insertMany([
         adjuntos: ['https://www.metodospago.com/'],
         medio_contacto: 'Chat',
         calificacion: 4,
-        categoria: [ObjectId(), ObjectId()],
-        id_usuario: ObjectId()
+        categoria: [ObjectId("000000000000000000000001"), ObjectId("000000000000000000000004")],
+        id_usuario: ObjectId("000000000000000000000004")
     },
     {
-        fecha_creacion: new Date(2023, 3, 12, 13, 0, 0),
-        estado: 'Abierto',
-        prioridad: 'Baja',
-        asunto: 'Problema menor con la búsqueda de productos',
-        descripcion: 'El cliente reporta resultados irrelevantes en las búsquedas',
-        fecha_resolucion: new Date(2023, 3, 14, 11, 0, 0),
-        comentarios: 'Optimizar motor de búsqueda',
-        adjuntos: [],
-        medio_contacto: 'Correo',
-        calificacion: 3,
-        categoria: [ObjectId(), ObjectId()],
-        id_usuario: ObjectId()
-    },
-    {
+        _id: ObjectId("000000000000000000000010"),
         fecha_creacion: new Date(2023, 11, 25, 10, 30, 0),
         estado: 'Abierto',
         prioridad: 'Alta',
@@ -166,10 +163,11 @@ db.Tickets_Soporte.insertMany([
         adjuntos: ['https://www.google.com/'],
         medio_contacto: 'Chat',
         calificacion: 5,
-        categoria: [ObjectId(), ObjectId()],
-        id_usuario: ObjectId()
+        categoria: [ObjectId("000000000000000000000000"), ObjectId("000000000000000000000001")],
+        id_usuario: ObjectId("000000000000000000000000")
     },
     {
+        _id: ObjectId("000000000000000000000011"),
         fecha_creacion: new Date(2023, 8, 12, 15, 45, 0),
         estado: 'Cerrado',
         prioridad: 'Media',
@@ -180,10 +178,11 @@ db.Tickets_Soporte.insertMany([
         adjuntos: ['https://www.imgur.com/'],
         medio_contacto: 'Correo',
         calificacion: 4,
-        categoria: [ObjectId(), ObjectId()],
-        id_usuario: ObjectId()
+        categoria: [ObjectId("000000000000000000000001"), ObjectId("000000000000000000000002")],
+        id_usuario: ObjectId("000000000000000000000001")
     },
     {
+        _id: ObjectId("000000000000000000000012"),
         fecha_creacion: new Date(2023, 5, 14, 9, 0, 0),
         estado: 'En Proceso',
         prioridad: 'Baja',
@@ -194,10 +193,11 @@ db.Tickets_Soporte.insertMany([
         adjuntos: [],
         medio_contacto: 'Teléfono',
         calificacion: 3,
-        categoria: [ObjectId(), ObjectId()],
-        id_usuario: ObjectId()
+        categoria: [ObjectId("000000000000000000000002"), ObjectId("000000000000000000000003")],
+        id_usuario: ObjectId("000000000000000000000002")
     },
     {
+        _id: ObjectId("000000000000000000000013"),
         fecha_creacion: new Date(2023, 10, 2, 14, 30, 0),
         estado: 'Abierto',
         prioridad: 'Alta',
@@ -208,10 +208,11 @@ db.Tickets_Soporte.insertMany([
         adjuntos: [],
         medio_contacto: 'Chat',
         calificacion: 5,
-        categoria: [ObjectId(), ObjectId()],
-        id_usuario: ObjectId()
+        categoria: [ObjectId("000000000000000000000003"), ObjectId("000000000000000000000004")],
+        id_usuario: ObjectId("000000000000000000000003")
     },
     {
+        _id: ObjectId("000000000000000000000014"),
         fecha_creacion: new Date(2023, 7, 25, 10, 30, 0),
         estado: 'Cerrado',
         prioridad: 'Alta',
@@ -222,10 +223,11 @@ db.Tickets_Soporte.insertMany([
         adjuntos: ['https://www.facturaejemplo.com/'],
         medio_contacto: 'Correo',
         calificacion: 5,
-        categoria: [ObjectId(), ObjectId()],
-        id_usuario: ObjectId()
+        categoria: [ObjectId("000000000000000000000000"), ObjectId("000000000000000000000002")],
+        id_usuario: ObjectId("000000000000000000000004")
     },
     {
+        _id: ObjectId("000000000000000000000015"),
         fecha_creacion: new Date(2023, 6, 15, 8, 30, 0),
         estado: 'En Proceso',
         prioridad: 'Media',
@@ -236,10 +238,11 @@ db.Tickets_Soporte.insertMany([
         adjuntos: [],
         medio_contacto: 'Teléfono',
         calificacion: 4,
-        categoria: [ObjectId(), ObjectId()],
-        id_usuario: ObjectId()
+        categoria: [ObjectId("000000000000000000000000"), ObjectId("000000000000000000000003")],
+        id_usuario: ObjectId("000000000000000000000000")
     },
     {
+        _id: ObjectId("000000000000000000000016"),
         fecha_creacion: new Date(2023, 4, 10, 11, 20, 0),
         estado: 'Cerrado',
         prioridad: 'Alta',
@@ -250,10 +253,11 @@ db.Tickets_Soporte.insertMany([
         adjuntos: ['https://www.soporteapp.com/'],
         medio_contacto: 'Chat',
         calificacion: 4,
-        categoria: [ObjectId(), ObjectId()],
-        id_usuario: ObjectId()
+        categoria: [ObjectId("000000000000000000000000"), ObjectId("000000000000000000000004")],
+        id_usuario: ObjectId("000000000000000000000001")
     },
     {
+        _id: ObjectId("000000000000000000000017"),
         fecha_creacion: new Date(2023, 11, 1, 17, 0, 0),
         estado: 'Abierto',
         prioridad: 'Baja',
@@ -264,10 +268,11 @@ db.Tickets_Soporte.insertMany([
         adjuntos: [],
         medio_contacto: 'Correo',
         calificacion: 3,
-        categoria: [ObjectId(), ObjectId()],
-        id_usuario: ObjectId()
+        categoria: [ObjectId("000000000000000000000001"), ObjectId("000000000000000000000002")],
+        id_usuario: ObjectId("000000000000000000000002")
     },
     {
+        _id: ObjectId("000000000000000000000018"),
         fecha_creacion: new Date(2023, 2, 5, 14, 10, 0),
         estado: 'Cerrado',
         prioridad: 'Media',
@@ -278,8 +283,23 @@ db.Tickets_Soporte.insertMany([
         adjuntos: [],
         medio_contacto: 'Teléfono',
         calificacion: 4,
-        categoria: [ObjectId(), ObjectId()],
-        id_usuario: ObjectId()
+        categoria: [ObjectId("000000000000000000000001"), ObjectId("000000000000000000000003")],
+        id_usuario: ObjectId("000000000000000000000003")
+    },
+    {
+        _id: ObjectId("000000000000000000000019"),
+        fecha_creacion: new Date(2023, 9, 10, 18, 30, 0),
+        estado: 'En Proceso',
+        prioridad: 'Alta',
+        asunto: 'Consulta sobre métodos de pago',
+        descripcion: 'Cliente solicita opciones de pago adicionales',
+        fecha_resolucion: null,
+        comentarios: 'Evaluar la integración de nuevos métodos de pago',
+        adjuntos: ['https://www.metodospago.com/'],
+        medio_contacto: 'Chat',
+        calificacion: 4,
+        categoria: [ObjectId("000000000000000000000001"), ObjectId("000000000000000000000004")],
+        id_usuario: ObjectId("000000000000000000000004")
     },
 ]
 );

@@ -1,12 +1,16 @@
 use('Furniview');
-
+//? Esquema de Validacion Listo
 db.createCollection('Tickets_Soporte', {
     validator: {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion de objeto tickets soporte',
-            required: ['fecha_creacion', 'estado', 'asunto', 'medio_contacto', 'categoria'],
+            required: ['_id', 'fecha_creacion', 'estado', 'asunto', 'medio_contacto', 'categoria'],
             properties: {
+                _id: {
+                    bsonType: 'objectId',
+                    description: 'Identificador unico de los tickets',
+                },
                 fecha_creacion: {
                     bsonType: 'date',
                     description: 'Fecha de creacion del ticket',
@@ -65,6 +69,7 @@ db.createCollection('Tickets_Soporte', {
                     description: 'Referencia a quien le pertenece cada uno de los tickets'
                 },
             },
+            additionalProperties: false,
         }
     }
 })
