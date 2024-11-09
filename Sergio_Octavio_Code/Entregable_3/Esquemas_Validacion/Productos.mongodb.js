@@ -5,10 +5,10 @@ db.createCollection('Productos', {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion para el objeto productos',
-            required: ['_id', 'nombre', 'precio', 'imagenURL', 'categorias', 'proveedor'],
+            required: ['_id', 'nombre', 'precio', 'imagen_url', 'id_categoria', 'id_proveedor'],
             properties: {
                 _id: {
-                    bsonType: 'objectId',
+                    bsonType: 'int',
                 },
                 nombre: {
                     bsonType: 'string',
@@ -20,30 +20,33 @@ db.createCollection('Productos', {
                 },
                 precio: {
                     oneOf: [{ bsonType: 'double' }, { bsonType: 'int' }],
-                    description: 'Precio del producto'
+                    description: 'Precio del producto',
+                    minimum: 0
                 },
                 stock: {
                     bsonType: 'int',
-                    description: 'Cantidad de producto que hay en existencia'
+                    description: 'Cantidad de producto que hay en existencia',
+                    minimum: 0
                 },
                 estado: {
                     enum: ['Activo', 'Inactivo', 'Agotado'],
                 },
-                fecha_de_creacion: {
+                fecha_creacion: {
                     oneOf: [{ bsonType: 'date' }, { bsonType: 'null' }],
                     description: 'Fecha de creacion de la publicacion'
                 },
-                fecha_de_actualizacion: {
+                fecha_actualizacion: {
                     oneOf: [{ bsonType: 'date' }, { bsonType: 'null' }],
                     description: 'Fecha de actualizacion de la publicacion'
                 },
-                imagenURL: {
+                imagen_url: {
                     bsonType: 'string',
                     description: 'URL de la imagen del producto'
                 },
                 peso: {
                     bsonType: 'int',
-                    description: 'Peso en kilogramos del producto'
+                    description: 'Peso en kilogramos del producto',
+                    minimum: 0
                 },
                 dimensiones: {
                     bsonType: 'string',
@@ -51,28 +54,24 @@ db.createCollection('Productos', {
                 },
                 valoracion_promedio: {
                     oneOf: [{ bsonType: 'double' }, { bsonType: 'int' }],
-                    description: 'Promedio de valoracion del producto'
+                    description: 'Promedio de valoracion del producto',
+                    minimum: 0
                 },
                 cantidad_valoraciones: {
                     bsonType: 'int',
-                    description: 'Cantidad de resenas publicadas del producto'
+                    description: 'Cantidad de resenas publicadas del producto',
+                    minimum: 0
                 },
                 tags: {
                     bsonType: 'string',
                     description: 'Etiquetas asociadas al producto'
                 },
-                categorias: {
-                    bsonType: 'array',
-                    description: 'Id de las categorias en las que entra el producto',
-                    minItems: 1,
-                    items: {
-                        bsonType: 'objectId',
-                    },
-                    uniqueItems: true,
-                },
-                proveedor: {
-                    bsonType: 'objectId',
+                id_proveedor: {
+                    bsonType: 'int',
                     description: 'Id del proveedor del producto'
+                },
+                id_categoria: {
+                    bsonType: 'int',
                 }
             },
             additionalProperties: false,

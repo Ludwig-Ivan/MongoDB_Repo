@@ -5,21 +5,21 @@ db.createCollection('Favoritos', {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion objecto favoritos',
-            required: ['_id', 'fecha_agregacion', 'usuario', 'producto'],
+            required: ['_id', 'fecha_agregacion', 'id_usuario', 'id_producto'],
             properties: {
                 _id: {
-                    bsonType: 'objectId',
+                    bsonType: 'int',
                 },
                 fecha_agregacion: {
                     bsonType: 'date',
                     description: 'Fecha en la que se agrego a la lista de favoritos',
                 },
-                usuario: {
-                    bsonType: 'objectId',
+                id_usuario: {
+                    bsonType: 'int',
                     description: 'Referencia al usuario que agrego este producto favorito',
                 },
-                producto: {
-                    bsonType: 'objectId',
+                id_producto: {
+                    bsonType: 'int',
                     description: 'Referencia al producto agregado a la lista de favoritos',
                 },
             },

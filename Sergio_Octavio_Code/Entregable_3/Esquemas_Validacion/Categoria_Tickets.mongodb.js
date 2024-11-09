@@ -8,7 +8,7 @@ db.createCollection('Categoria_Tickets', {
             required: ['_id', 'tipo', 'descripcion'],
             properties: {
                 _id: {
-                    bsonType: 'objectId',
+                    bsonType: 'int',
                 },
                 tipo: {
                     bsonType: 'string',

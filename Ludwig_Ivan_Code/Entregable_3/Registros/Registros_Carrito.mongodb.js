@@ -2,508 +2,508 @@ use('Furniview');
 //? Registros Listo
 db.Carrito.insertMany([
     {
-        _id: ObjectId('000000000000000000000000'),
-        fecha_creacion: new Date(),
+        _id: 1,
+        fecha_creacion: new Date('2024-11-07T23:18:16.860'),
         estado: 'Activo',
         total: 2500.00,
-        usuario: ObjectId('000000000000000000000000'),
+        id_usuario: 1,
         carrito_producto: [
             {
-                producto: ObjectId('000000000000000000000000'),
+                id_producto: 1,
                 cantidad: 2,
-                subtotal: 200.00,
+                subtotal: 200.00
             },
             {
-                producto: ObjectId('000000000000000000000001'),
+                id_producto: 2,
                 cantidad: 3,
-                subtotal: 600.00,
+                subtotal: 600.00
             },
             {
-                producto: ObjectId('000000000000000000000002'),
+                id_producto: 3,
                 cantidad: 8,
-                subtotal: 800.00,
+                subtotal: 800.00
             },
             {
-                producto: ObjectId('000000000000000000000003'),
+                id_producto: 4,
                 cantidad: 1,
-                subtotal: 500.00,
+                subtotal: 500.00
             },
             {
-                producto: ObjectId('000000000000000000000004'),
+                id_producto: 5,
                 cantidad: 2,
-                subtotal: 400.00,
-            },
-        ],
+                subtotal: 400.00
+            }
+        ]
     },
     {
-        _id: ObjectId('000000000000000000000001'),
-        fecha_creacion: new Date(),
+        _id: 2,
+        fecha_creacion: new Date('2024-11-07T23:18:16.860'),
         estado: 'Pendiente',
         total: 2100.00,
-        usuario: ObjectId('000000000000000000000001'),
+        id_usuario: 2,
         carrito_producto: [
             {
-                producto: ObjectId('000000000000000000000005'),
+                id_producto: 6,
                 cantidad: 2,
-                subtotal: 200.00,
+                subtotal: 200.00
             },
             {
-                producto: ObjectId('000000000000000000000006'),
+                id_producto: 7,
                 cantidad: 3,
-                subtotal: 600.00,
+                subtotal: 600.00
             },
             {
-                producto: ObjectId('000000000000000000000007'),
+                id_producto: 8,
                 cantidad: 8,
-                subtotal: 800.00,
+                subtotal: 800.00
             },
             {
-                producto: ObjectId('000000000000000000000008'),
+                id_producto: 9,
                 cantidad: 1,
-                subtotal: 500.00,
-            },
-        ],
+                subtotal: 500.00
+            }
+        ]
     },
     {
-        _id: ObjectId('000000000000000000000002'),
-        fecha_creacion: new Date(),
+        _id: 3,
+        fecha_creacion: new Date('2024-11-07T23:18:16.860'),
         estado: 'Completado',
         total: 2300.00,
-        usuario: ObjectId('000000000000000000000002'),
+        id_usuario: 3,
         carrito_producto: [
             {
-                producto: ObjectId('000000000000000000000009'),
+                id_producto: 10,
                 cantidad: 3,
-                subtotal: 600.00,
+                subtotal: 600.00
             },
             {
-                producto: ObjectId('000000000000000000000010'),
+                id_producto: 11,
                 cantidad: 8,
-                subtotal: 800.00,
+                subtotal: 800.00
             },
             {
-                producto: ObjectId('000000000000000000000011'),
+                id_producto: 12,
                 cantidad: 1,
-                subtotal: 500.00,
+                subtotal: 500.00
             },
             {
-                producto: ObjectId('000000000000000000000012'),
+                id_producto: 13,
                 cantidad: 2,
-                subtotal: 400.00,
-            },
-        ],
+                subtotal: 400.00
+            }
+        ]
     },
     {
-        _id: ObjectId('000000000000000000000003'),
-        fecha_creacion: new Date(),
+        _id: 4,
+        fecha_creacion: new Date('2024-11-07T23:18:16.860'),
         estado: 'Activo',
         total: 1700.00,
-        usuario: ObjectId('000000000000000000000003'),
+        id_usuario: 4,
         carrito_producto: [
             {
-                producto: ObjectId('000000000000000000000013'),
+                id_producto: 14,
                 cantidad: 2,
-                subtotal: 200.00,
+                subtotal: 200.00
             },
             {
-                producto: ObjectId('000000000000000000000014'),
+                id_producto: 15,
                 cantidad: 3,
-                subtotal: 600.00,
+                subtotal: 600.00
             },
             {
-                producto: ObjectId('000000000000000000000015'),
+                id_producto: 16,
                 cantidad: 1,
-                subtotal: 500.00,
+                subtotal: 500.00
             },
             {
-                producto: ObjectId('000000000000000000000016'),
+                id_producto: 17,
                 cantidad: 2,
-                subtotal: 400.00,
-            },
-        ],
+                subtotal: 400.00
+            }
+        ]
     },
     {
-        _id: ObjectId('000000000000000000000004'),
-        fecha_creacion: new Date(),
+        _id: 5,
+        fecha_creacion: new Date('2024-11-07T23:18:16.860'),
         estado: 'Pendiente',
         total: 1600.00,
-        usuario: ObjectId('000000000000000000000004'),
+        id_usuario: 5,
         carrito_producto: [
             {
-                producto: ObjectId('000000000000000000000017'),
+                id_producto: 18,
                 cantidad: 2,
-                subtotal: 200.00,
+                subtotal: 200.00
             },
             {
-                producto: ObjectId('000000000000000000000018'),
+                id_producto: 19,
                 cantidad: 3,
-                subtotal: 600.00,
+                subtotal: 600.00
             },
             {
-                producto: ObjectId('000000000000000000000019'),
+                id_producto: 20,
                 cantidad: 8,
-                subtotal: 800.00,
-            },
-        ],
+                subtotal: 800.00
+            }
+        ]
     },
     {
-        _id: ObjectId('000000000000000000000005'),
-        fecha_creacion: new Date(),
+        _id: 6,
+        fecha_creacion: new Date('2024-11-07T23:18:16.860'),
         estado: 'Activo',
         total: 1700.00,
-        usuario: ObjectId('000000000000000000000000'),
+        id_usuario: 1,
         carrito_producto: [
             {
-                producto: ObjectId('000000000000000000000000'),
+                id_producto: 1,
                 cantidad: 2,
-                subtotal: 200.00,
+                subtotal: 200.00
             },
             {
-                producto: ObjectId('000000000000000000000001'),
+                id_producto: 2,
                 cantidad: 3,
-                subtotal: 600.00,
+                subtotal: 600.00
             },
             {
-                producto: ObjectId('000000000000000000000002'),
+                id_producto: 3,
                 cantidad: 8,
-                subtotal: 800.00,
-            },
-        ],
+                subtotal: 800.00
+            }
+        ]
     },
     {
-        _id: ObjectId('000000000000000000000006'),
-        fecha_creacion: new Date(),
+        _id: 7,
+        fecha_creacion: new Date('2024-11-07T23:18:16.860'),
         estado: 'Completado',
         total: 1800.00,
-        usuario: ObjectId('000000000000000000000001'),
+        id_usuario: 2,
         carrito_producto: [
             {
-                producto: ObjectId('000000000000000000000003'),
+                id_producto: 4,
                 cantidad: 2,
-                subtotal: 200.00,
+                subtotal: 200.00
             },
             {
-                producto: ObjectId('000000000000000000000004'),
+                id_producto: 5,
                 cantidad: 3,
-                subtotal: 600.00,
+                subtotal: 600.00
             },
             {
-                producto: ObjectId('000000000000000000000005'),
+                id_producto: 6,
                 cantidad: 8,
-                subtotal: 800.00,
-            },
-        ],
+                subtotal: 800.00
+            }
+        ]
     },
     {
-        _id: ObjectId('000000000000000000000007'),
-        fecha_creacion: new Date(),
+        _id: 8,
+        fecha_creacion: new Date('2024-11-07T23:18:16.860'),
         estado: 'Pendiente',
         total: 1900.00,
-        usuario: ObjectId('000000000000000000000002'),
+        id_usuario: 3,
         carrito_producto: [
             {
-                producto: ObjectId('000000000000000000000006'),
+                id_producto: 7,
                 cantidad: 2,
-                subtotal: 200.00,
+                subtotal: 200.00
             },
             {
-                producto: ObjectId('000000000000000000000007'),
+                id_producto: 8,
                 cantidad: 3,
-                subtotal: 600.00,
+                subtotal: 600.00
             },
             {
-                producto: ObjectId('000000000000000000000008'),
+                id_producto: 9,
                 cantidad: 8,
-                subtotal: 800.00,
-            },
-        ],
+                subtotal: 800.00
+            }
+        ]
     },
     {
-        _id: ObjectId('000000000000000000000008'),
-        fecha_creacion: new Date(),
+        _id: 9,
+        fecha_creacion: new Date('2024-11-07T23:18:16.860'),
         estado: 'Activo',
         total: 2000.00,
-        usuario: ObjectId('000000000000000000000003'),
+        id_usuario: 4,
         carrito_producto: [
             {
-                producto: ObjectId('000000000000000000000009'),
+                id_producto: 10,
                 cantidad: 2,
-                subtotal: 200.00,
+                subtotal: 200.00
             },
             {
-                producto: ObjectId('000000000000000000000010'),
+                id_producto: 11,
                 cantidad: 3,
-                subtotal: 600.00,
+                subtotal: 600.00
             },
             {
-                producto: ObjectId('000000000000000000000011'),
+                id_producto: 12,
                 cantidad: 8,
-                subtotal: 800.00,
-            },
-        ],
+                subtotal: 800.00
+            }
+        ]
     },
     {
-        _id: ObjectId('000000000000000000000009'),
-        fecha_creacion: new Date(),
+        _id: 10,
+        fecha_creacion: new Date('2024-11-07T23:18:16.860'),
         estado: 'Completado',
         total: 2100.00,
-        usuario: ObjectId('000000000000000000000004'),
+        id_usuario: 5,
         carrito_producto: [
             {
-                producto: ObjectId('000000000000000000000012'),
+                id_producto: 13,
                 cantidad: 2,
-                subtotal: 200.00,
+                subtotal: 200.00
             },
             {
-                producto: ObjectId('000000000000000000000013'),
+                id_producto: 14,
                 cantidad: 3,
-                subtotal: 600.00,
+                subtotal: 600.00
             },
             {
-                producto: ObjectId('000000000000000000000014'),
+                id_producto: 15,
                 cantidad: 8,
-                subtotal: 800.00,
-            },
-        ],
+                subtotal: 800.00
+            }
+        ]
     },
     {
-        _id: ObjectId('000000000000000000000010'),
-        fecha_creacion: new Date(),
+        _id: 11,
+        fecha_creacion: new Date('2024-11-07T23:18:16.860'),
         estado: 'Pendiente',
         total: 2200.00,
-        usuario: ObjectId('000000000000000000000000'),
+        id_usuario: 1,
         carrito_producto: [
             {
-                producto: ObjectId('000000000000000000000015'),
+                id_producto: 16,
                 cantidad: 2,
-                subtotal: 200.00,
+                subtotal: 200.00
             },
             {
-                producto: ObjectId('000000000000000000000016'),
+                id_producto: 17,
                 cantidad: 3,
-                subtotal: 600.00,
+                subtotal: 600.00
             },
             {
-                producto: ObjectId('000000000000000000000017'),
+                id_producto: 18,
                 cantidad: 8,
-                subtotal: 800.00,
-            },
-        ],
+                subtotal: 800.00
+            }
+        ]
     },
     {
-        _id: ObjectId('000000000000000000000011'),
-        fecha_creacion: new Date(),
+        _id: 12,
+        fecha_creacion: new Date('2024-11-07T23:18:16.860'),
         estado: 'Activo',
         total: 2300.00,
-        usuario: ObjectId('000000000000000000000001'),
+        id_usuario: 2,
         carrito_producto: [
             {
-                producto: ObjectId('000000000000000000000018'),
+                id_producto: 19,
                 cantidad: 2,
-                subtotal: 200.00,
+                subtotal: 200.00
             },
             {
-                producto: ObjectId('000000000000000000000019'),
+                id_producto: 20,
                 cantidad: 3,
-                subtotal: 600.00,
+                subtotal: 600.00
             },
             {
-                producto: ObjectId('000000000000000000000000'),
+                id_producto: 1,
                 cantidad: 8,
-                subtotal: 800.00,
-            },
-        ],
+                subtotal: 800.00
+            }
+        ]
     },
     {
-        _id: ObjectId('000000000000000000000012'),
-        fecha_creacion: new Date(),
+        _id: 13,
+        fecha_creacion: new Date('2024-11-07T23:18:16.860'),
         estado: 'Completado',
         total: 2400.00,
-        usuario: ObjectId('000000000000000000000002'),
+        id_usuario: 3,
         carrito_producto: [
             {
-                producto: ObjectId('000000000000000000000001'),
+                id_producto: 2,
                 cantidad: 2,
-                subtotal: 200.00,
+                subtotal: 200.00
             },
             {
-                producto: ObjectId('000000000000000000000002'),
+                id_producto: 3,
                 cantidad: 3,
-                subtotal: 600.00,
+                subtotal: 600.00
             },
             {
-                producto: ObjectId('000000000000000000000003'),
+                id_producto: 4,
                 cantidad: 8,
-                subtotal: 800.00,
-            },
-        ],
+                subtotal: 800.00
+            }
+        ]
     },
     {
-        _id: ObjectId('000000000000000000000013'),
-        fecha_creacion: new Date(),
+        _id: 14,
+        fecha_creacion: new Date('2024-11-07T23:18:16.860'),
         estado: 'Pendiente',
         total: 2500.00,
-        usuario: ObjectId('000000000000000000000003'),
+        id_usuario: 4,
         carrito_producto: [
             {
-                producto: ObjectId('000000000000000000000004'),
+                id_producto: 5,
                 cantidad: 2,
-                subtotal: 200.00,
+                subtotal: 200.00
             },
             {
-                producto: ObjectId('000000000000000000000005'),
+                id_producto: 6,
                 cantidad: 3,
-                subtotal: 600.00,
+                subtotal: 600.00
             },
             {
-                producto: ObjectId('000000000000000000000006'),
+                id_producto: 7,
                 cantidad: 8,
-                subtotal: 800.00,
-            },
-        ],
+                subtotal: 800.00
+            }
+        ]
     },
     {
-        _id: ObjectId('000000000000000000000014'),
-        fecha_creacion: new Date(),
+        _id: 15,
+        fecha_creacion: new Date('2024-11-07T23:18:16.860'),
         estado: 'Activo',
         total: 2600.00,
-        usuario: ObjectId('000000000000000000000004'),
+        id_usuario: 5,
         carrito_producto: [
             {
-                producto: ObjectId('000000000000000000000007'),
+                id_producto: 8,
                 cantidad: 2,
-                subtotal: 200.00,
+                subtotal: 200.00
             },
             {
-                producto: ObjectId('000000000000000000000008'),
+                id_producto: 9,
                 cantidad: 3,
-                subtotal: 600.00,
+                subtotal: 600.00
             },
             {
-                producto: ObjectId('000000000000000000000009'),
+                id_producto: 10,
                 cantidad: 8,
-                subtotal: 800.00,
-            },
-        ],
+                subtotal: 800.00
+            }
+        ]
     },
     {
-        _id: ObjectId('000000000000000000000015'),
-        fecha_creacion: new Date(),
+        _id: 16,
+        fecha_creacion: new Date('2024-11-07T23:18:16.860'),
         estado: 'Activo',
         total: 2700.00,
-        usuario: ObjectId('000000000000000000000000'),
+        id_usuario: 1,
         carrito_producto: [
             {
-                producto: ObjectId('000000000000000000000010'),
+                id_producto: 11,
                 cantidad: 2,
-                subtotal: 200.00,
+                subtotal: 200.00
             },
             {
-                producto: ObjectId('000000000000000000000011'),
+                id_producto: 12,
                 cantidad: 3,
-                subtotal: 600.00,
+                subtotal: 600.00
             },
             {
-                producto: ObjectId('000000000000000000000012'),
+                id_producto: 13,
                 cantidad: 8,
-                subtotal: 800.00,
-            },
-        ],
+                subtotal: 800.00
+            }
+        ]
     },
     {
-        _id: ObjectId('000000000000000000000016'),
-        fecha_creacion: new Date(),
+        _id: 17,
+        fecha_creacion: new Date('2024-11-07T23:18:16.860'),
         estado: 'Activo',
         total: 2800.00,
-        usuario: ObjectId('000000000000000000000001'),
+        id_usuario: 2,
         carrito_producto: [
             {
-                producto: ObjectId('000000000000000000000013'),
+                id_producto: 14,
                 cantidad: 2,
-                subtotal: 200.00,
+                subtotal: 200.00
             },
             {
-                producto: ObjectId('000000000000000000000014'),
+                id_producto: 15,
                 cantidad: 3,
-                subtotal: 600.00,
+                subtotal: 600.00
             },
             {
-                producto: ObjectId('000000000000000000000015'),
+                id_producto: 16,
                 cantidad: 8,
-                subtotal: 800.00,
-            },
-        ],
+                subtotal: 800.00
+            }
+        ]
     },
     {
-        _id: ObjectId('000000000000000000000017'),
-        fecha_creacion: new Date(),
+        _id: 18,
+        fecha_creacion: new Date('2024-11-07T23:18:16.860'),
         estado: 'Activo',
         total: 2900.00,
-        usuario: ObjectId('000000000000000000000002'),
+        id_usuario: 3,
         carrito_producto: [
             {
-                producto: ObjectId('000000000000000000000016'),
+                id_producto: 17,
                 cantidad: 2,
-                subtotal: 200.00,
+                subtotal: 200.00
             },
             {
-                producto: ObjectId('000000000000000000000017'),
+                id_producto: 18,
                 cantidad: 3,
-                subtotal: 600.00,
+                subtotal: 600.00
             },
             {
-                producto: ObjectId('000000000000000000000018'),
+                id_producto: 19,
                 cantidad: 8,
-                subtotal: 800.00,
-            },
-        ],
+                subtotal: 800.00
+            }
+        ]
     },
     {
-        _id: ObjectId('000000000000000000000018'),
-        fecha_creacion: new Date(),
+        _id: 19,
+        fecha_creacion: new Date('2024-11-07T23:18:16.860'),
         estado: 'Activo',
         total: 3000.00,
-        usuario: ObjectId('000000000000000000000003'),
+        id_usuario: 4,
         carrito_producto: [
             {
-                producto: ObjectId('000000000000000000000019'),
+                id_producto: 20,
                 cantidad: 2,
-                subtotal: 200.00,
+                subtotal: 200.00
             },
             {
-                producto: ObjectId('000000000000000000000000'),
+                id_producto: 1,
                 cantidad: 3,
-                subtotal: 600.00,
+                subtotal: 600.00
             },
             {
-                producto: ObjectId('000000000000000000000001'),
+                id_producto: 2,
                 cantidad: 8,
-                subtotal: 800.00,
-            },
-        ],
+                subtotal: 800.00
+            }
+        ]
     },
     {
-        _id: ObjectId('000000000000000000000019'),
-        fecha_creacion: new Date(),
+        _id: 20,
+        fecha_creacion: new Date('2024-11-07T23:18:16.860'),
         estado: 'Activo',
         total: 3100.00,
-        usuario: ObjectId('000000000000000000000004'),
+        id_usuario: 5,
         carrito_producto: [
             {
-                producto: ObjectId('000000000000000000000002'),
+                id_producto: 3,
                 cantidad: 2,
-                subtotal: 200.00,
+                subtotal: 200.00
             },
             {
-                producto: ObjectId('000000000000000000000003'),
+                id_producto: 4,
                 cantidad: 3,
-                subtotal: 600.00,
+                subtotal: 600.00
             },
             {
-                producto: ObjectId('000000000000000000000004'),
+                id_producto: 5,
                 cantidad: 8,
-                subtotal: 800.00,
-            },
-        ],
-    },
+                subtotal: 800.00
+            }
+        ]
+    }
 ])

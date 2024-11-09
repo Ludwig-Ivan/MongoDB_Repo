@@ -5,10 +5,10 @@ db.createCollection('Ofertas', {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion para el objeto ofertas',
-            required: ['_id', 'nombre', 'descripcion', 'tipo', 'estado', 'valor', 'productos', 'categorias', 'usuarios', 'proveedores'],
+            required: ['_id', 'nombre', 'descripcion', 'tipo', 'estado', 'valor', 'id_producto', 'id_categoria', 'id_usuario', 'id_proveedor'],
             properties: {
                 _id: {
-                    bsonType: 'objectId',
+                    bsonType: 'int',
                 },
                 nombre: {
                     bsonType: 'string',
@@ -19,12 +19,13 @@ db.createCollection('Ofertas', {
                     description: 'Descripcion de la oferta'
                 },
                 tipo: {
-                    bsonType: 'string',
+                    enum: ['Porcentual', 'Cantidad fija'],
                     description: 'Tipo de oferta'
                 },
                 valor: {
                     oneOf: [{ bsonType: 'double' }, { bsonType: 'int' }],
-                    description: 'Porcentaje (en decimales) de la oferta'
+                    description: 'Porcentaje (en decimales) de la oferta',
+                    minimum: 0
                 },
                 fecha_inicio:
                 {
@@ -49,40 +50,27 @@ db.createCollection('Ofertas', {
                     bsonType: 'string',
                     description: 'Condiciones a cumplir para la aplicacion del descuento'
                 },
-                limite_de_uso: {
+                limite_uso: {
                     bsonType: 'int',
-                    description: 'Veces que puede ser utilizado'
+                    description: 'Veces que puede ser utilizado',
+                    minimum: 0
                 },
                 usos_actuales: {
                     bsonType: 'int',
-                    description: 'Veces usado el codigo'
+                    description: 'Veces usado el codigo',
+                    minimum: 0
                 },
-                productos: {
-                    bsonType: 'array',
-                    description: 'Id de los productos aplicables',
-                    items: {
-                        bsonType: 'objectId',
-                    },
-                    uniqueItems: true,
+                id_producto: {
+                    bsonType: 'int',
                 },
-                categorias: {
-                    bsonType: 'array',
-                    description: 'Id de las categorias a las que son aplicables',
-                    items: {
-                        bsonType: 'objectId',
-                    },
-                    uniqueItems: true,
+                id_categoria: {
+                    bsonType: 'int',
                 },
-                usuarios: {
-                    bsonType: 'array',
-                    description: 'Id de los usuarios',
-                    items: {
-                        bsonType: 'objectId',
-                    },
-                    uniqueItems: true,
+                id_usuario: {
+                    bsonType: 'int',
                 },
-                proveedores: {
-                    bsonType: 'objectId',
+                id_proveedor: {
+                    bsonType: 'int',
                     description: 'Id de las categorias a las que son aplicables',
                 },
             },

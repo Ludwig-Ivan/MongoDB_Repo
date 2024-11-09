@@ -5,10 +5,10 @@ db.createCollection('Envios', {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion del objecto envio',
-            required: ['_id', 'fecha_envio', 'estado', 'metodo', 'costo', 'numero_seguimiento', 'compania_transporte', 'carrito', 'locacion'],
+            required: ['_id', 'fecha_envio', 'estado', 'metodo', 'costo', 'numero_seguimiento', 'compania_transporte', 'id_carrito', 'id_locacion'],
             properties: {
                 _id: {
-                    bsonType: 'objectId',
+                    bsonType: 'int',
                 },
                 fecha_envio: {
                     bsonType: 'date',
@@ -29,6 +29,7 @@ db.createCollection('Envios', {
                 costo: {
                     oneOf: [{ bsonType: 'double' }, { bsonType: 'int' }],
                     description: 'Indica el costo del envio',
+                    minimum: 0
                 },
                 numero_seguimiento: {
                     bsonType: 'string',
@@ -37,14 +38,16 @@ db.createCollection('Envios', {
                 peso: {
                     oneOf: [{ bsonType: 'double' }, { bsonType: 'int' }],
                     description: 'Indica el peso de todo el paquete',
+                    minimum: 0
                 },
                 dimensiones: {
                     bsonType: 'string',
                     description: 'Indica las dimenciones del paquete (Largo, Ancho, Alto)',
                 },
-                intentos_entrega: {
+                intento_entrega: {
                     bsonType: 'int',
                     description: 'Indica la cantidad de veces que se intento entregar el paquete',
+                    minimum: 0
                 },
                 fecha_cancelacion: {
                     oneOf: [{ bsonType: 'date' }, { bsonType: 'null' }],
@@ -54,12 +57,12 @@ db.createCollection('Envios', {
                     bsonType: 'string',
                     description: 'Indica la compania encargada del transporte',
                 },
-                carrito: {
-                    bsonType: 'objectId',
+                id_carrito: {
+                    bsonType: 'int',
                     description: 'Referencia que lista de productos va a ser utilizada para el envio',
                 },
-                locacion: {
-                    bsonType: 'objectId',
+                id_locacion: {
+                    bsonType: 'int',
                     description: 'Referencia a la locacion de entrega',
                 },
             },

@@ -5,10 +5,10 @@ db.createCollection('Carrito', {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion para el objeto carrito',
-            required: ['_id', 'fecha_creacion', 'estado', 'usuario', 'carrito_producto', 'total'],
+            required: ['_id', 'fecha_creacion', 'estado', 'id_usuario', 'carrito_producto', 'total'],
             properties: {
                 _id: {
-                    bsonType: 'objectId'
+                    bsonType: 'int'
                 },
                 fecha_creacion: {
                     bsonType: 'date',
@@ -21,9 +21,10 @@ db.createCollection('Carrito', {
                 total: {
                     oneOf: [{ bsonType: 'double' }, { bsonType: 'int' }],
                     description: 'Indica el total de todos los productos del carrito',
+                    minimum: 0,
                 },
-                usuario: {
-                    bsonType: 'objectId',
+                id_usuario: {
+                    bsonType: 'int',
                     description: 'Referencia al usuario que le pertenece el carrito',
                 },
                 carrito_producto: {
@@ -32,19 +33,21 @@ db.createCollection('Carrito', {
                     minItems: 1,
                     items: {
                         bsonType: 'object',
-                        required: ['producto', 'cantidad', 'subtotal'],
+                        required: ['id_producto', 'cantidad', 'subtotal'],
                         properties: {
-                            producto: {
-                                bsonType: 'objectId',
+                            id_producto: {
+                                bsonType: 'int',
                                 description: 'Referencia al producto que se agrego al carrito',
                             },
                             cantidad: {
                                 bsonType: 'int',
                                 description: 'Indica la cantidad de productos en el carrito',
+                                minimum: 1
                             },
                             subtotal: {
                                 oneOf: [{ bsonType: 'double' }, { bsonType: 'int' }],
-                                description: 'Indica el subtotal generado del producto en el carrito'
+                                description: 'Indica el subtotal generado del producto en el carrito',
+                                minimum: 0
                             },
                         }
                     },

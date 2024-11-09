@@ -5,10 +5,10 @@ db.createCollection('Pagos', {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion de objecto pagos',
-            required: ['_id', 'monto_total', 'metodo', 'estado', 'referencia_pago', 'carrito'],
+            required: ['_id', 'monto_total', 'metodo_pago', 'estado', 'referencia_pago', 'id_carrito'],
             properties: {
                 _id: {
-                    bsonType: 'objectId',
+                    bsonType: 'int',
                 },
                 monto_total: {
                     oneOf: [{ bsonType: 'double' }, { bsonType: 'int' }],
@@ -18,7 +18,7 @@ db.createCollection('Pagos', {
                     oneOf: [{ bsonType: 'date' }, { bsonType: 'null' }],
                     description: 'Indica la fecha en la que se realizo el pago',
                 },
-                metodo: {
+                metodo_pago: {
                     enum: ['Tarjeta de credito', 'Tarjeta de debito', 'Proveedor de pago'],
                     description: 'Indica con que metodo fue realizado el pago',
                 },
@@ -34,8 +34,8 @@ db.createCollection('Pagos', {
                     enum: ['OXXO', 'PayPal', 'Aurrera', ''],
                     description: 'Indica que proveedor se utilizo para realizar el pago',
                 },
-                carrito: {
-                    bsonType: 'objectId',
+                id_carrito: {
+                    bsonType: 'int',
                     description: 'Referencia al carrito correspondiente al que se le retribuira el pago',
                 },
             },

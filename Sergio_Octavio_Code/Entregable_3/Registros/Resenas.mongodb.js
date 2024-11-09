@@ -2,143 +2,143 @@ use('Furniview');
 //? Registros Listos
 db.Resenas.insertMany([
   {
-    _id: ObjectId('000000000000000000000000'),
+    _id: 1,
     calificacion: 5,
     comentario: "Excelente calidad y muy cómodo.",
-    usuario: ObjectId('000000000000000000000000'),
-    producto: ObjectId('000000000000000000000000')
+    id_usuario: 1,
+    id_producto: 1
   },
   {
-    _id: ObjectId('000000000000000000000001'),
+    _id: 2,
     calificacion: 4,
     comentario: "Muy buena opción para el jardín.",
-    usuario: ObjectId('000000000000000000000001'),
-    producto: ObjectId('000000000000000000000001')
+    id_usuario: 2,
+    id_producto: 2
   },
   {
-    _id: ObjectId('000000000000000000000002'),
+    _id: 3,
     calificacion: 3,
     comentario: "El material podría ser mejor.",
-    usuario: ObjectId('000000000000000000000002'),
-    producto: ObjectId('000000000000000000000002')
+    id_usuario: 3,
+    id_producto: 3
   },
   {
-    _id: ObjectId('000000000000000000000003'),
+    _id: 4,
     calificacion: 5,
     comentario: "Me encanta, se ve genial en mi sala.",
-    usuario: ObjectId('000000000000000000000003'),
-    producto: ObjectId('000000000000000000000003')
+    id_usuario: 4,
+    id_producto: 4
   },
   {
-    _id: ObjectId('000000000000000000000004'),
+    _id: 5,
     calificacion: 2,
     comentario: "No es lo que esperaba, un poco decepcionado.",
-    usuario: ObjectId('000000000000000000000004'),
-    producto: ObjectId('000000000000000000000004')
+    id_usuario: 5,
+    id_producto: 5
   },
   {
-    _id: ObjectId('000000000000000000000005'),
+    _id: 6,
     calificacion: 4,
     comentario: "Buena lámpara, pero un poco cara.",
-    usuario: ObjectId('000000000000000000000000'),
-    producto: ObjectId('000000000000000000000005')
+    id_usuario: 1,
+    id_producto: 6
   },
   {
-    _id: ObjectId('000000000000000000000006'),
+    _id: 7,
     calificacion: 5,
     comentario: "Perfecto para trabajar desde casa.",
-    usuario: ObjectId('000000000000000000000001'),
-    producto: ObjectId('000000000000000000000006')
+    id_usuario: 2,
+    id_producto: 7
   },
   {
-    _id: ObjectId('000000000000000000000007'),
+    _id: 8,
     calificacion: 4,
     comentario: "Funciona bien, aunque es un poco pequeño.",
-    usuario: ObjectId('000000000000000000000002'),
-    producto: ObjectId('000000000000000000000007')
+    id_usuario: 3,
+    id_producto: 8
   },
   {
-    _id: ObjectId('000000000000000000000008'),
+    _id: 9,
     calificacion: 3,
     comentario: "Buena hamaca, pero me gustaría más colores.",
-    usuario: ObjectId('000000000000000000000003'),
-    producto: ObjectId('000000000000000000000008')
+    id_usuario: 4,
+    id_producto: 9
   },
   {
-    _id: ObjectId('000000000000000000000009'),
+    _id: 10,
     calificacion: 5,
     comentario: "Súper cómoda y fácil de montar.",
-    usuario: ObjectId('000000000000000000000004'),
-    producto: ObjectId('000000000000000000000009')
+    id_usuario: 5,
+    id_producto: 10
   },
   {
-    _id: ObjectId('000000000000000000000010'),
+    _id: 11,
     calificacion: 5,
     comentario: "Excelente calidad y muy cómodo.",
-    usuario: ObjectId('000000000000000000000000'),
-    producto: ObjectId('000000000000000000000010')
+    id_usuario: 1,
+    id_producto: 11
   },
   {
-    _id: ObjectId('000000000000000000000011'),
+    _id: 12,
     calificacion: 4,
     comentario: "Muy buena opción para el jardín.",
-    usuario: ObjectId('000000000000000000000001'),
-    producto: ObjectId('000000000000000000000011')
+    id_usuario: 2,
+    id_producto: 12
   },
   {
-    _id: ObjectId('000000000000000000000012'),
+    _id: 13,
     calificacion: 3,
     comentario: "El material podría ser mejor.",
-    usuario: ObjectId('000000000000000000000002'),
-    producto: ObjectId('000000000000000000000012')
+    id_usuario: 3,
+    id_producto: 13
   },
   {
-    _id: ObjectId('000000000000000000000013'),
+    _id: 14,
     calificacion: 5,
     comentario: "Me encanta, se ve genial en mi sala.",
-    usuario: ObjectId('000000000000000000000003'),
-    producto: ObjectId('000000000000000000000013')
+    id_usuario: 4,
+    id_producto: 14
   },
   {
-    _id: ObjectId('000000000000000000000014'),
+    _id: 15,
     calificacion: 2,
     comentario: "No es lo que esperaba, un poco decepcionado.",
-    usuario: ObjectId('000000000000000000000004'),
-    producto: ObjectId('000000000000000000000014')
+    id_usuario: 5,
+    id_producto: 15
   },
   {
-    _id: ObjectId('000000000000000000000015'),
+    _id: 16,
     calificacion: 4,
     comentario: "Buena lámpara, pero un poco cara.",
-    usuario: ObjectId('000000000000000000000000'),
-    producto: ObjectId('000000000000000000000015')
+    id_usuario: 1,
+    id_producto: 16
   },
   {
-    _id: ObjectId('000000000000000000000016'),
+    _id: 17,
     calificacion: 5,
     comentario: "Perfecto para trabajar desde casa.",
-    usuario: ObjectId('000000000000000000000001'),
-    producto: ObjectId('000000000000000000000016')
+    id_usuario: 2,
+    id_producto: 17
   },
   {
-    _id: ObjectId('000000000000000000000017'),
+    _id: 18,
     calificacion: 4,
     comentario: "Funciona bien, aunque es un poco pequeño.",
-    usuario: ObjectId('000000000000000000000002'),
-    producto: ObjectId('000000000000000000000017')
+    id_usuario: 3,
+    id_producto: 18
   },
   {
-    _id: ObjectId('000000000000000000000018'),
+    _id: 19,
     calificacion: 3,
     comentario: "Buena hamaca, pero me gustaría más colores.",
-    usuario: ObjectId('000000000000000000000003'),
-    producto: ObjectId('000000000000000000000018')
+    id_usuario: 4,
+    id_producto: 19
   },
   {
-    _id: ObjectId('000000000000000000000019'),
+    _id: 20,
     calificacion: 5,
     comentario: "Súper cómoda y fácil de montar.",
-    usuario: ObjectId('000000000000000000000004'),
-    producto: ObjectId('000000000000000000000019')
+    id_usuario: 5,
+    id_producto: 20
   }
 ]);

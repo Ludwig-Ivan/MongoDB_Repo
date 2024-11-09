@@ -2,143 +2,163 @@ use('Furniview');
 //? Registros Listos 
 db.Historial_Busqueda.insertMany([
     {
-        fecha_busqueda: new Date(),
+        _id: 1,
+        fecha_busqueda: new Date('2024-11-07 23:12:56'),
         cantidad_resultados: 10,
         terminos: 'Mesa de Madera',
-        usuario: ObjectId('000000000000000000000000'),
-        producto: ObjectId('000000000000000000000000'),
+        id_usuario: 1,
+        id_producto: 1
     },
     {
-        fecha_busqueda: new Date(),
+        _id: 2,
+        fecha_busqueda: new Date('2024-11-07 23:12:56'),
         cantidad_resultados: 20,
         terminos: 'Silla de Madera',
-        usuario: ObjectId('000000000000000000000001'),
-        producto: ObjectId('000000000000000000000001'),
+        id_usuario: 2,
+        id_producto: 2
     },
     {
-        fecha_busqueda: new Date(),
+        _id: 3,
+        fecha_busqueda: new Date('2024-11-07 23:12:56'),
         cantidad_resultados: 5,
         terminos: 'Banca de Madera',
-        usuario: ObjectId('000000000000000000000002'),
-        producto: ObjectId('000000000000000000000002'),
+        id_usuario: 3,
+        id_producto: 3
     },
     {
-        fecha_busqueda: new Date(),
+        _id: 4,
+        fecha_busqueda: new Date('2024-11-07 23:12:56'),
         cantidad_resultados: 1,
         terminos: 'Ropero Blanco',
-        usuario: ObjectId('000000000000000000000003'),
-        producto: ObjectId('000000000000000000000003'),
+        id_usuario: 4,
+        id_producto: 4
     },
     {
-        fecha_busqueda: new Date(),
+        _id: 5,
+        fecha_busqueda: new Date('2024-11-07 23:12:56'),
         cantidad_resultados: 15,
         terminos: 'Repisa Minimalista',
-        usuario: ObjectId('000000000000000000000004'),
-        producto: ObjectId('000000000000000000000004'),
+        id_usuario: 5,
+        id_producto: 5
     },
     {
-        fecha_busqueda: new Date(),
+        _id: 6,
+        fecha_busqueda: new Date('2024-11-07 23:12:56'),
         cantidad_resultados: 12,
         terminos: 'Marco puerta',
-        usuario: ObjectId('000000000000000000000000'),
-        producto: ObjectId('000000000000000000000005'),
+        id_usuario: 1,
+        id_producto: 6
     },
     {
-        fecha_busqueda: new Date(),
+        _id: 7,
+        fecha_busqueda: new Date('2024-11-07 23:12:56'),
         cantidad_resultados: 7,
         terminos: 'Puerta',
-        usuario: ObjectId('000000000000000000000001'),
-        producto: ObjectId('000000000000000000000006'),
+        id_usuario: 2,
+        id_producto: 7
     },
     {
-        fecha_busqueda: new Date(),
+        _id: 8,
+        fecha_busqueda: new Date('2024-11-07 23:12:56'),
         cantidad_resultados: 17,
         terminos: 'Soportes',
-        usuario: ObjectId('000000000000000000000002'),
-        producto: ObjectId('000000000000000000000007'),
+        id_usuario: 3,
+        id_producto: 8
     },
     {
-        fecha_busqueda: new Date(),
+        _id: 9,
+        fecha_busqueda: new Date('2024-11-07 23:12:56'),
         cantidad_resultados: 10,
         terminos: 'Mesa de Madera',
-        usuario: ObjectId('000000000000000000000003'),
-        producto: ObjectId('000000000000000000000008'),
+        id_usuario: 4,
+        id_producto: 9
     },
     {
-        fecha_busqueda: new Date(),
-        cantidad_resultados: 10,
-        terminos: 'Mesa de Madera',
-        usuario: ObjectId('000000000000000000000004'),
-        producto: ObjectId('000000000000000000000009'),
-    },
-    {
-        fecha_busqueda: new Date(),
-        cantidad_resultados: 10,
-        terminos: 'Mesa de Madera',
-        usuario: ObjectId('000000000000000000000000'),
-        producto: ObjectId('000000000000000000000010'),
-    },
-    {
-        fecha_busqueda: new Date(),
+        _id: 10,
+        fecha_busqueda: new Date('2024-11-07 23:12:56'),
         cantidad_resultados: 20,
         terminos: 'Silla de Madera',
-        usuario: ObjectId('000000000000000000000001'),
-        producto: ObjectId('000000000000000000000011'),
+        id_usuario: 5,
+        id_producto: 10
     },
     {
-        fecha_busqueda: new Date(),
+        _id: 11,
+        fecha_busqueda: new Date('2024-11-07 23:12:56'),
+        cantidad_resultados: 10,
+        terminos: 'Mesa de Madera',
+        id_usuario: 1,
+        id_producto: 11
+    },
+    {
+        _id: 12,
+        fecha_busqueda: new Date('2024-11-07 23:12:56'),
+        cantidad_resultados: 20,
+        terminos: 'Silla de Madera',
+        id_usuario: 2,
+        id_producto: 12
+    },
+    {
+        _id: 13,
+        fecha_busqueda: new Date('2024-11-07 23:12:56'),
         cantidad_resultados: 5,
         terminos: 'Banca de Madera',
-        usuario: ObjectId('000000000000000000000002'),
-        producto: ObjectId('000000000000000000000012'),
+        id_usuario: 3,
+        id_producto: 13
     },
     {
-        fecha_busqueda: new Date(),
+        _id: 14,
+        fecha_busqueda: new Date('2024-11-07 23:12:56'),
         cantidad_resultados: 1,
         terminos: 'Ropero Blanco',
-        usuario: ObjectId('000000000000000000000003'),
-        producto: ObjectId('000000000000000000000013'),
+        id_usuario: 4,
+        id_producto: 14
     },
     {
-        fecha_busqueda: new Date(),
+        _id: 15,
+        fecha_busqueda: new Date('2024-11-07 23:12:56'),
         cantidad_resultados: 15,
         terminos: 'Repisa Minimalista',
-        usuario: ObjectId('000000000000000000000004'),
-        producto: ObjectId('000000000000000000000014'),
+        id_usuario: 5,
+        id_producto: 15
     },
     {
-        fecha_busqueda: new Date(),
+        _id: 16,
+        fecha_busqueda: new Date('2024-11-07 23:12:56'),
         cantidad_resultados: 12,
         terminos: 'Marco puerta',
-        usuario: ObjectId('000000000000000000000000'),
-        producto: ObjectId('000000000000000000000015'),
+        id_usuario: 1,
+        id_producto: 16
     },
     {
-        fecha_busqueda: new Date(),
+        _id: 17,
+        fecha_busqueda: new Date('2024-11-07 23:12:56'),
         cantidad_resultados: 7,
         terminos: 'Puerta',
-        usuario: ObjectId('000000000000000000000001'),
-        producto: ObjectId('000000000000000000000016'),
+        id_usuario: 2,
+        id_producto: 17
     },
     {
-        fecha_busqueda: new Date(),
+        _id: 18,
+        fecha_busqueda: new Date('2024-11-07 23:12:56'),
         cantidad_resultados: 17,
         terminos: 'Soportes',
-        usuario: ObjectId('000000000000000000000002'),
-        producto: ObjectId('000000000000000000000017'),
+        id_usuario: 3,
+        id_producto: 18
     },
     {
-        fecha_busqueda: new Date(),
+        _id: 19,
+        fecha_busqueda: new Date('2024-11-07 23:12:56'),
         cantidad_resultados: 10,
         terminos: 'Mesa de Madera',
-        usuario: ObjectId('000000000000000000000003'),
-        producto: ObjectId('000000000000000000000018'),
+        id_usuario: 4,
+        id_producto: 19
     },
     {
-        fecha_busqueda: new Date(),
-        cantidad_resultados: 10,
-        terminos: 'Mesa de Madera',
-        usuario: ObjectId('000000000000000000000004'),
-        producto: ObjectId('000000000000000000000019'),
-    },
+        _id: 20,
+        fecha_busqueda: new Date('2024-11-07 23:12:56'),
+        cantidad_resultados: 20,
+        terminos: 'Silla de Madera',
+        id_usuario: 5,
+        id_producto: 20
+    }
 ]);

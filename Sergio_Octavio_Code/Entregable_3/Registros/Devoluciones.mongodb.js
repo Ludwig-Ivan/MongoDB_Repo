@@ -2,323 +2,323 @@ use('Furniview');
 //? Registros Listos
 db.Devoluciones.insertMany([
   {
-    _id: ObjectId('000000000000000000000000'),
-    fecha: new Date(),
+    _id: 1,
+    fecha: new Date('2024-11-07 23:33:27'),
     motivo: "La mesa estaba rota en el momento de llegada.",
-    estado: 'activo',
+    estado: "Pendiente",
     total: 1500.00,
-    usuario: ObjectId('000000000000000000000000'),
-    carrito: ObjectId('000000000000000000000000'),
-    devolucion: [
+    id_usuario: 1,
+    id_carrito: 1,
+    devoluciones_carrito: [
       {
-        producto: ObjectId('000000000000000000000000'),
+        id_producto: 1,
         cantidad: 1,
         subtotal: 1500.00
       }
     ]
   },
   {
-    _id: ObjectId('000000000000000000000001'),
-    fecha: new Date(),
+    _id: 2,
+    fecha: new Date('2024-11-07 23:33:27'),
     motivo: "La silla tenía un defecto en la base.",
-    estado: 'activo',
+    estado: "Pendiente",
     total: 1200.00,
-    usuario: ObjectId('000000000000000000000001'),
-    carrito: ObjectId('000000000000000000000001'),
-    devolucion: [
+    id_usuario: 2,
+    id_carrito: 2,
+    devoluciones_carrito: [
       {
-        producto: ObjectId('000000000000000000000001'),
+        id_producto: 2,
         cantidad: 1,
         subtotal: 1200.00
       }
     ]
   },
   {
-    _id: ObjectId('000000000000000000000002'),
-    fecha: new Date(),
+    _id: 3,
+    fecha: new Date('2024-11-07 23:33:27'),
     motivo: "El sofá tenía manchas.",
-    estado: 'activo',
+    estado: "Pendiente",
     total: 8500.00,
-    usuario: ObjectId('000000000000000000000002'),
-    carrito: ObjectId('000000000000000000000002'),
-    devolucion: [
+    id_usuario: 3,
+    id_carrito: 3,
+    devoluciones_carrito: [
       {
-        producto: ObjectId('000000000000000000000002'),
+        id_producto: 3,
         cantidad: 1,
         subtotal: 8500.00
       }
     ]
   },
   {
-    _id: ObjectId('000000000000000000000003'),
-    fecha: new Date(),
+    _id: 4,
+    fecha: new Date('2024-11-07 23:33:27'),
     motivo: "La lámpara no funcionaba.",
-    estado: 'activo',
+    estado: "Pendiente",
     total: 1800.00,
-    usuario: ObjectId('000000000000000000000003'),
-    carrito: ObjectId('000000000000000000000003'),
-    devolucion: [
+    id_usuario: 4,
+    id_carrito: 4,
+    devoluciones_carrito: [
       {
-        producto: ObjectId('000000000000000000000003'),
+        id_producto: 4,
         cantidad: 1,
         subtotal: 1800.00
       }
     ]
   },
   {
-    _id: ObjectId('000000000000000000000004'),
-    fecha: new Date(),
+    _id: 5,
+    fecha: new Date('2024-11-07 23:33:27'),
     motivo: "La tumbona estaba dañada.",
-    estado: 'activo',
+    estado: "Pendiente",
     total: 3200.00,
-    usuario: ObjectId('000000000000000000000004'),
-    carrito: ObjectId('000000000000000000000004'),
-    devolucion: [
+    id_usuario: 5,
+    id_carrito: 5,
+    devoluciones_carrito: [
       {
-        producto: ObjectId('000000000000000000000004'),
+        id_producto: 5,
         cantidad: 1,
         subtotal: 3200.00
       }
     ]
   },
   {
-    _id: ObjectId('000000000000000000000005'),
-    fecha: new Date(),
+    _id: 6,
+    fecha: new Date('2024-11-07 23:33:27'),
     motivo: "La tumbona estaba dañada.",
-    estado: 'activo',
+    estado: "Pendiente",
     total: 4200.00,
-    usuario: ObjectId('000000000000000000000000'),
-    carrito: ObjectId('000000000000000000000005'),
-    devolucion: [
+    id_usuario: 1,
+    id_carrito: 6,
+    devoluciones_carrito: [
       {
-        producto: ObjectId('000000000000000000000005'),
+        id_producto: 6,
         cantidad: 1,
         subtotal: 4200.00
       }
     ]
   },
   {
-    _id: ObjectId('000000000000000000000006'),
-    fecha: new Date(),
+    _id: 7,
+    fecha: new Date('2024-11-07 23:33:27'),
     motivo: "La mesa estaba rota en el momento de llegada.",
-    estado: 'activo',
+    estado: "Pendiente",
     total: 1500.00,
-    usuario: ObjectId('000000000000000000000001'),
-    carrito: ObjectId('000000000000000000000006'),
-    devolucion: [
+    id_usuario: 2,
+    id_carrito: 7,
+    devoluciones_carrito: [
       {
-        producto: ObjectId('000000000000000000000006'),
+        id_producto: 7,
         cantidad: 1,
         subtotal: 1500.00
       }
     ]
   },
   {
-    _id: ObjectId('000000000000000000000007'),
-    fecha: new Date(),
+    _id: 8,
+    fecha: new Date('2024-11-07 23:33:27'),
     motivo: "La silla tenía un defecto en la base.",
-    estado: 'activo',
+    estado: "Pendiente",
     total: 1200.00,
-    usuario: ObjectId('000000000000000000000002'),
-    carrito: ObjectId('000000000000000000000007'),
-    devolucion: [
+    id_usuario: 3,
+    id_carrito: 8,
+    devoluciones_carrito: [
       {
-        producto: ObjectId('000000000000000000000007'),
+        id_producto: 8,
         cantidad: 1,
         subtotal: 1200.00
       }
     ]
   },
   {
-    _id: ObjectId('000000000000000000000008'),
-    fecha: new Date(),
+    _id: 9,
+    fecha: new Date('2024-11-07 23:33:27'),
     motivo: "El sofá tenía manchas.",
-    estado: 'activo',
+    estado: "Pendiente",
     total: 8500.00,
-    usuario: ObjectId('000000000000000000000003'),
-    carrito: ObjectId('000000000000000000000008'),
-    devolucion: [
+    id_usuario: 4,
+    id_carrito: 9,
+    devoluciones_carrito: [
       {
-        producto: ObjectId('000000000000000000000008'),
+        id_producto: 9,
         cantidad: 1,
         subtotal: 8500.00
       }
     ]
   },
   {
-    _id: ObjectId('000000000000000000000009'),
-    fecha: new Date(),
+    _id: 10,
+    fecha: new Date('2024-11-07 23:33:27'),
     motivo: "La lámpara no funcionaba.",
-    estado: 'activo',
+    estado: "Pendiente",
     total: 1800.00,
-    usuario: ObjectId('000000000000000000000004'),
-    carrito: ObjectId('000000000000000000000009'),
-    devolucion: [
+    id_usuario: 5,
+    id_carrito: 10,
+    devoluciones_carrito: [
       {
-        producto: ObjectId('000000000000000000000009'),
+        id_producto: 10,
         cantidad: 1,
         subtotal: 1800.00
       }
     ]
-  },//!---------------------------------------------------
+  },
   {
-    _id: ObjectId('000000000000000000000010'),
-    fecha: new Date(),
+    _id: 11,
+    fecha: new Date('2024-11-07 23:33:27'),
     motivo: "La mesa estaba rota en el momento de llegada.",
-    estado: 'activo',
+    estado: "Pendiente",
     total: 1500.00,
-    usuario: ObjectId('000000000000000000000000'),
-    carrito: ObjectId('000000000000000000000010'),
-    devolucion: [
+    id_usuario: 1,
+    id_carrito: 11,
+    devoluciones_carrito: [
       {
-        producto: ObjectId('000000000000000000000010'),
+        id_producto: 11,
         cantidad: 1,
         subtotal: 1500.00
       }
     ]
   },
   {
-    _id: ObjectId('000000000000000000000011'),
-    fecha: new Date(),
+    _id: 12,
+    fecha: new Date('2024-11-07 23:33:27'),
     motivo: "La silla tenía un defecto en la base.",
-    estado: 'activo',
+    estado: "Pendiente",
     total: 1200.00,
-    usuario: ObjectId('000000000000000000000001'),
-    carrito: ObjectId('000000000000000000000011'),
-    devolucion: [
+    id_usuario: 2,
+    id_carrito: 12,
+    devoluciones_carrito: [
       {
-        producto: ObjectId('000000000000000000000011'),
+        id_producto: 12,
         cantidad: 1,
         subtotal: 1200.00
       }
     ]
   },
   {
-    _id: ObjectId('000000000000000000000012'),
-    fecha: new Date(),
+    _id: 13,
+    fecha: new Date('2024-11-07 23:33:27'),
     motivo: "El sofá tenía manchas.",
-    estado: 'activo',
+    estado: "Pendiente",
     total: 8500.00,
-    usuario: ObjectId('000000000000000000000002'),
-    carrito: ObjectId('000000000000000000000012'),
-    devolucion: [
+    id_usuario: 3,
+    id_carrito: 13,
+    devoluciones_carrito: [
       {
-        producto: ObjectId('000000000000000000000012'),
+        id_producto: 13,
         cantidad: 1,
         subtotal: 8500.00
       }
     ]
   },
   {
-    _id: ObjectId('000000000000000000000013'),
-    fecha: new Date(),
+    _id: 14,
+    fecha: new Date('2024-11-07 23:33:27'),
     motivo: "La lámpara no funcionaba.",
-    estado: 'activo',
+    estado: "Pendiente",
     total: 1800.00,
-    usuario: ObjectId('000000000000000000000003'),
-    carrito: ObjectId('000000000000000000000013'),
-    devolucion: [
+    id_usuario: 4,
+    id_carrito: 14,
+    devoluciones_carrito: [
       {
-        producto: ObjectId('000000000000000000000013'),
+        id_producto: 14,
         cantidad: 1,
         subtotal: 1800.00
       }
     ]
   },
   {
-    _id: ObjectId('000000000000000000000014'),
-    fecha: new Date(),
+    _id: 15,
+    fecha: new Date('2024-11-07 23:33:27'),
     motivo: "La tumbona estaba dañada.",
-    estado: 'activo',
+    estado: "Pendiente",
     total: 3200.00,
-    usuario: ObjectId('000000000000000000000004'),
-    carrito: ObjectId('000000000000000000000014'),
-    devolucion: [
+    id_usuario: 5,
+    id_carrito: 15,
+    devoluciones_carrito: [
       {
-        producto: ObjectId('000000000000000000000014'),
+        id_producto: 15,
         cantidad: 1,
         subtotal: 3200.00
       }
     ]
   },
   {
-    _id: ObjectId('000000000000000000000015'),
-    fecha: new Date(),
+    _id: 16,
+    fecha: new Date('2024-11-07 23:33:27'),
     motivo: "La tumbona estaba dañada.",
-    estado: 'activo',
+    estado: "Pendiente",
     total: 4200.00,
-    usuario: ObjectId('000000000000000000000000'),
-    carrito: ObjectId('000000000000000000000015'),
-    devolucion: [
+    id_usuario: 1,
+    id_carrito: 16,
+    devoluciones_carrito: [
       {
-        producto: ObjectId('000000000000000000000015'),
+        id_producto: 16,
         cantidad: 1,
         subtotal: 4200.00
       }
     ]
   },
   {
-    _id: ObjectId('000000000000000000000016'),
-    fecha: new Date(),
+    _id: 17,
+    fecha: new Date('2024-11-07 23:33:27'),
     motivo: "La mesa estaba rota en el momento de llegada.",
-    estado: 'activo',
+    estado: "Pendiente",
     total: 1500.00,
-    usuario: ObjectId('000000000000000000000001'),
-    carrito: ObjectId('000000000000000000000016'),
-    devolucion: [
+    id_usuario: 2,
+    id_carrito: 17,
+    devoluciones_carrito: [
       {
-        producto: ObjectId('000000000000000000000016'),
+        id_producto: 17,
         cantidad: 1,
         subtotal: 1500.00
       }
     ]
   },
   {
-    _id: ObjectId('000000000000000000000017'),
-    fecha: new Date(),
+    _id: 18,
+    fecha: new Date('2024-11-07 23:33:27'),
     motivo: "La silla tenía un defecto en la base.",
-    estado: 'activo',
+    estado: "Pendiente",
     total: 1200.00,
-    usuario: ObjectId('000000000000000000000002'),
-    carrito: ObjectId('000000000000000000000017'),
-    devolucion: [
+    id_usuario: 3,
+    id_carrito: 18,
+    devoluciones_carrito: [
       {
-        producto: ObjectId('000000000000000000000017'),
+        id_producto: 18,
         cantidad: 1,
         subtotal: 1200.00
       }
     ]
   },
   {
-    _id: ObjectId('000000000000000000000018'),
-    fecha: new Date(),
+    _id: 19,
+    fecha: new Date('2024-11-07 23:33:27'),
     motivo: "El sofá tenía manchas.",
-    estado: 'activo',
+    estado: "Pendiente",
     total: 8500.00,
-    usuario: ObjectId('000000000000000000000003'),
-    carrito: ObjectId('000000000000000000000018'),
-    devolucion: [
+    id_usuario: 4,
+    id_carrito: 19,
+    devoluciones_carrito: [
       {
-        producto: ObjectId('000000000000000000000018'),
+        id_producto: 19,
         cantidad: 1,
         subtotal: 8500.00
       }
     ]
   },
   {
-    _id: ObjectId('000000000000000000000019'),
-    fecha: new Date(),
+    _id: 20,
+    fecha: new Date('2024-11-07 23:33:27'),
     motivo: "La lámpara no funcionaba.",
-    estado: 'activo',
+    estado: "Pendiente",
     total: 1800.00,
-    usuario: ObjectId('000000000000000000000004'),
-    carrito: ObjectId('000000000000000000000019'),
-    devolucion: [
+    id_usuario: 5,
+    id_carrito: 20,
+    devoluciones_carrito: [
       {
-        producto: ObjectId('000000000000000000000019'),
+        id_producto: 20,
         cantidad: 1,
         subtotal: 1800.00
       }
     ]
-  },
+  }
 ]);

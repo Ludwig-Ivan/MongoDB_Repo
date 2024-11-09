@@ -8,7 +8,7 @@ db.createCollection('Categorias', {
             required: ['_id', 'nombre', 'estado', 'fecha_creacion', 'imagen_url'],
             properties: {
                 _id: {
-                    bsonType: 'objectId'
+                    bsonType: 'int'
                 },
                 nombre: {
                     bsonType: 'string',
@@ -31,7 +31,7 @@ db.createCollection('Categorias', {
                     description: 'Link url de la imagen de la categoria correspondiente',
                 },
                 id_categoria_padre: {
-                    oneOf: [{ bsonType: 'objectId' }, { bsonType: 'null' }],
+                    oneOf: [{ bsonType: 'int' }, { bsonType: 'null' }],
                     description: 'Referenciada para categorias hijo.',
                 },
             },

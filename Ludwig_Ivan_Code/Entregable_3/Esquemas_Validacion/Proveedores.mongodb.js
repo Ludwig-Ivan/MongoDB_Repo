@@ -5,13 +5,13 @@ db.createCollection('Proveedores', {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion de objeto proveedor',
-            required: ['_id', 'nombre', 'contacto_nombre', 'email', 'contrasena', 'tipo'],
+            required: ['_id', 'nombre', 'contacto_nombre', 'correo', 'contrasena', 'tipo'],
             properties: {
                 //? Se agrego el _id dado a que agregamos la propiedad additionPropierties y lo colocamos en false
                 //? Mongo coloca de forma automatica el objectId cuando identifica el campo.
                 //! Importante: Si additionPropierties esta activo (true), puede agregar el campo _id el mismo. 
                 _id: {
-                    bsonType: 'objectId',
+                    bsonType: 'int',
                 },
                 nombre: {
                     bsonType: 'string',
@@ -22,16 +22,9 @@ db.createCollection('Proveedores', {
                     description: 'Nombre de contacto del proveedor',
                 },
                 telefono: {
-                    bsonType: 'array',
-                    description: 'Numeros de telefono del proveedor',
-                    minItems: 1,
-                    maxItems: 3,
-                    items: {
-                        bsonType: 'string',
-                    },
-                    uniqueItems: true,
+                    bsonType: 'string',
                 },
-                email: {
+                correo: {
                     bsonType: 'string',
                     description: 'Correo electronico del proveedor para comunicacion con el',
                     pattern: '^[A-Za-z\\d.-]{1,}[@][A-Za-z\\d.-]{1,}[.][A-Za-z\\d.-]{1,}$',
@@ -99,7 +92,7 @@ db.createCollection('Proveedores', {
 //? Evita la generacion de duplicados
 
 db.Proveedores.createIndex(
-    { email: 1 },
+    { correo: 1 },
     { unique: true }
 )
 

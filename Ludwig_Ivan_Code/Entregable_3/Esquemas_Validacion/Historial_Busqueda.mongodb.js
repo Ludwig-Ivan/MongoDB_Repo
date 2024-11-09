@@ -5,10 +5,10 @@ db.createCollection('Historial_Busqueda', {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion del objecto historial busqueda',
-            required: ['_id', 'fecha_busqueda', 'cantidad_resultados', 'terminos', 'usuario'],
+            required: ['_id', 'fecha_busqueda', 'cantidad_resultados', 'terminos', 'id_usuario'],
             properties: {
                 _id: {
-                    bsonType: 'objectId',
+                    bsonType: 'int',
                 },
                 fecha_busqueda: {
                     bsonType: 'date',
@@ -16,18 +16,19 @@ db.createCollection('Historial_Busqueda', {
                 },
                 cantidad_resultados: {
                     bsonType: 'int',
-                    description: 'Cantidad de resultados obtenidos en base a los terminos usados'
+                    description: 'Cantidad de resultados obtenidos en base a los terminos usados',
+                    minimum: 0
                 },
                 terminos: {
                     bsonType: 'string',
                     description: 'Terminos aplicados para la busqueda',
                 },
-                usuario: {
-                    bsonType: 'objectId',
+                id_usuario: {
+                    bsonType: 'int',
                     description: 'Referencia al usuario que hizo una busqueda',
                 },
-                producto: {
-                    bsonType: 'objectId',
+                id_producto: {
+                    bsonType: 'int',
                     description: 'Referencia al producto que fue seleccionado',
                 },
             },

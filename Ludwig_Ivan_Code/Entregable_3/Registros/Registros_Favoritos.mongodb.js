@@ -2,123 +2,123 @@ use('Furniview');
 //? registros Listos
 db.Favoritos.insertMany([
     {
-        _id: ObjectId('000000000000000000000000'),
-        fecha_agregacion: new Date(),
-        usuario: ObjectId('000000000000000000000000'),
-        producto: ObjectId('000000000000000000000000'),
+        _id: 1,
+        fecha_agregacion: new Date('2024-11-07 23:13:24'),
+        id_usuario: 1,
+        id_producto: 1
     },
     {
-        _id: ObjectId('000000000000000000000001'),
-        fecha_agregacion: new Date(),
-        usuario: ObjectId('000000000000000000000001'),
-        producto: ObjectId('000000000000000000000001'),
+        _id: 2,
+        fecha_agregacion: new Date('2024-11-07 23:13:24'),
+        id_usuario: 2,
+        id_producto: 2
     },
     {
-        _id: ObjectId('000000000000000000000002'),
-        fecha_agregacion: new Date(),
-        usuario: ObjectId('000000000000000000000002'),
-        producto: ObjectId('000000000000000000000002'),
+        _id: 3,
+        fecha_agregacion: new Date('2024-11-07 23:13:24'),
+        id_usuario: 3,
+        id_producto: 3
     },
     {
-        _id: ObjectId('000000000000000000000003'),
-        fecha_agregacion: new Date(),
-        usuario: ObjectId('000000000000000000000003'),
-        producto: ObjectId('000000000000000000000003'),
+        _id: 4,
+        fecha_agregacion: new Date('2024-11-07 23:13:24'),
+        id_usuario: 4,
+        id_producto: 4
     },
     {
-        _id: ObjectId('000000000000000000000004'),
-        fecha_agregacion: new Date(),
-        usuario: ObjectId('000000000000000000000004'),
-        producto: ObjectId('000000000000000000000004'),
+        _id: 5,
+        fecha_agregacion: new Date('2024-11-07 23:13:24'),
+        id_usuario: 5,
+        id_producto: 5
     },
     {
-        _id: ObjectId('000000000000000000000005'),
-        fecha_agregacion: new Date(),
-        usuario: ObjectId('000000000000000000000000'),
-        producto: ObjectId('000000000000000000000005'),
+        _id: 6,
+        fecha_agregacion: new Date('2024-11-07 23:13:24'),
+        id_usuario: 1,
+        id_producto: 6
     },
     {
-        _id: ObjectId('000000000000000000000006'),
-        fecha_agregacion: new Date(),
-        usuario: ObjectId('000000000000000000000001'),
-        producto: ObjectId('000000000000000000000006'),
+        _id: 7,
+        fecha_agregacion: new Date('2024-11-07 23:13:24'),
+        id_usuario: 2,
+        id_producto: 7
     },
     {
-        _id: ObjectId('000000000000000000000007'),
-        fecha_agregacion: new Date(),
-        usuario: ObjectId('000000000000000000000002'),
-        producto: ObjectId('000000000000000000000007'),
+        _id: 8,
+        fecha_agregacion: new Date('2024-11-07 23:13:24'),
+        id_usuario: 3,
+        id_producto: 8
     },
     {
-        _id: ObjectId('000000000000000000000008'),
-        fecha_agregacion: new Date(),
-        usuario: ObjectId('000000000000000000000003'),
-        producto: ObjectId('000000000000000000000008'),
+        _id: 9,
+        fecha_agregacion: new Date('2024-11-07 23:13:24'),
+        id_usuario: 4,
+        id_producto: 9
     },
     {
-        _id: ObjectId('000000000000000000000009'),
-        fecha_agregacion: new Date(),
-        usuario: ObjectId('000000000000000000000004'),
-        producto: ObjectId('000000000000000000000009'),
+        _id: 10,
+        fecha_agregacion: new Date('2024-11-07 23:13:24'),
+        id_usuario: 5,
+        id_producto: 10
     },
     {
-        _id: ObjectId('000000000000000000000010'),
-        fecha_agregacion: new Date(),
-        usuario: ObjectId('000000000000000000000000'),
-        producto: ObjectId('000000000000000000000010'),
+        _id: 11,
+        fecha_agregacion: new Date('2024-11-07 23:13:24'),
+        id_usuario: 1,
+        id_producto: 11
     },
     {
-        _id: ObjectId('000000000000000000000011'),
-        fecha_agregacion: new Date(),
-        usuario: ObjectId('000000000000000000000001'),
-        producto: ObjectId('000000000000000000000011'),
+        _id: 12,
+        fecha_agregacion: new Date('2024-11-07 23:13:24'),
+        id_usuario: 2,
+        id_producto: 12
     },
     {
-        _id: ObjectId('000000000000000000000012'),
-        fecha_agregacion: new Date(),
-        usuario: ObjectId('000000000000000000000002'),
-        producto: ObjectId('000000000000000000000012'),
+        _id: 13,
+        fecha_agregacion: new Date('2024-11-07 23:13:24'),
+        id_usuario: 3,
+        id_producto: 13
     },
     {
-        _id: ObjectId('000000000000000000000013'),
-        fecha_agregacion: new Date(),
-        usuario: ObjectId('000000000000000000000003'),
-        producto: ObjectId('000000000000000000000013'),
+        _id: 14,
+        fecha_agregacion: new Date('2024-11-07 23:13:24'),
+        id_usuario: 4,
+        id_producto: 14
     },
     {
-        _id: ObjectId('000000000000000000000014'),
-        fecha_agregacion: new Date(),
-        usuario: ObjectId('000000000000000000000004'),
-        producto: ObjectId('000000000000000000000014'),
+        _id: 15,
+        fecha_agregacion: new Date('2024-11-07 23:13:24'),
+        id_usuario: 5,
+        id_producto: 15
     },
     {
-        _id: ObjectId('000000000000000000000015'),
-        fecha_agregacion: new Date(),
-        usuario: ObjectId('000000000000000000000000'),
-        producto: ObjectId('000000000000000000000015'),
+        _id: 16,
+        fecha_agregacion: new Date('2024-11-07 23:13:24'),
+        id_usuario: 1,
+        id_producto: 16
     },
     {
-        _id: ObjectId('000000000000000000000016'),
-        fecha_agregacion: new Date(),
-        usuario: ObjectId('000000000000000000000001'),
-        producto: ObjectId('000000000000000000000016'),
+        _id: 17,
+        fecha_agregacion: new Date('2024-11-07 23:13:24'),
+        id_usuario: 2,
+        id_producto: 17
     },
     {
-        _id: ObjectId('000000000000000000000017'),
-        fecha_agregacion: new Date(),
-        usuario: ObjectId('000000000000000000000002'),
-        producto: ObjectId('000000000000000000000017'),
+        _id: 18,
+        fecha_agregacion: new Date('2024-11-07 23:13:24'),
+        id_usuario: 3,
+        id_producto: 18
     },
     {
-        _id: ObjectId('000000000000000000000018'),
-        fecha_agregacion: new Date(),
-        usuario: ObjectId('000000000000000000000003'),
-        producto: ObjectId('000000000000000000000018'),
+        _id: 19,
+        fecha_agregacion: new Date('2024-11-07 23:13:24'),
+        id_usuario: 4,
+        id_producto: 19
     },
     {
-        _id: ObjectId('000000000000000000000019'),
-        fecha_agregacion: new Date(),
-        usuario: ObjectId('000000000000000000000004'),
-        producto: ObjectId('000000000000000000000019'),
-    },
+        _id: 20,
+        fecha_agregacion: new Date('2024-11-07 23:13:24'),
+        id_usuario: 5,
+        id_producto: 20
+    }
 ]);

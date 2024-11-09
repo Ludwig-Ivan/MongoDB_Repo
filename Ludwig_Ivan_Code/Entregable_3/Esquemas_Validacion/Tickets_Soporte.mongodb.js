@@ -5,10 +5,10 @@ db.createCollection('Tickets_Soporte', {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion de objeto tickets soporte',
-            required: ['_id', 'fecha_creacion', 'estado', 'asunto', 'medio_contacto', 'categoria'],
+            required: ['_id', 'fecha_creacion', 'estado', 'asunto', 'medio_contacto', 'id_categoria_ticket'],
             properties: {
                 _id: {
-                    bsonType: 'objectId',
+                    bsonType: 'int',
                     description: 'Identificador unico de los tickets',
                 },
                 fecha_creacion: {
@@ -35,17 +35,18 @@ db.createCollection('Tickets_Soporte', {
                     oneOf: [{ bsonType: 'date' }, { bsonType: 'null' }],
                     description: 'Fecha y hora a la que se resolvio el ticket',
                 },
+                resolucion: {
+                    bsonType: 'string'
+                },
+                fecha_actualizacion: {
+                    bsonType: 'date'
+                },
                 comentarios: {
                     bsonType: 'string',
                     description: 'Comentarios sobre ticket',
                 },
                 adjuntos: {
-                    bsonType: 'array',
-                    description: 'Links URL de informacion adjunta para tratamiento del ticket',
-                    items: {
-                        bsonType: 'string',
-                    },
-                    uniqueItems: true,
+                    bsonType: 'string',
                 },
                 medio_contacto: {
                     bsonType: 'string',
@@ -54,18 +55,14 @@ db.createCollection('Tickets_Soporte', {
                 calificacion: {
                     bsonType: 'int',
                     description: 'Valoracion de la atencion al ticket',
+                    minimum: 0,
                 },
-                categoria: {
-                    bsonType: 'array',
+                id_categoria_ticket: {
+                    bsonType: 'int',
                     description: 'Referencia a que categoria pertenece cada ticket',
-                    minItems: 1,
-                    items: {
-                        bsonType: 'objectId',
-                    },
-                    uniqueItems: true,
                 },
                 id_usuario: {
-                    bsonType: 'objectId',
+                    bsonType: 'int',
                     description: 'Referencia a quien le pertenece cada uno de los tickets'
                 },
             },

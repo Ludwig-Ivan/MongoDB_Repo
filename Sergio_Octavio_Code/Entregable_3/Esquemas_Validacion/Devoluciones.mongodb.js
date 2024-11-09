@@ -5,10 +5,10 @@ db.createCollection('Devoluciones', {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion para el objeto devoluciones',
-            required: ['_id', 'fecha', 'motivo', 'total', 'usuario', 'carrito', 'devolucion'],
+            required: ['_id', 'fecha', 'motivo', 'total', 'id_usuario', 'id_carrito', 'devoluciones_carrito'],
             properties: {
                 _id: {
-                    bsonType: 'objectId',
+                    bsonType: 'int',
                 },
                 fecha: {
                     bsonType: 'date',
@@ -19,39 +19,42 @@ db.createCollection('Devoluciones', {
                     description: 'Motivo por la devolucion'
                 },
                 estado: {
-                    bsonType: 'string'
+                    enum: ['Pendiente', 'Aprobada', 'Completada']
                 },
                 total: {
                     oneOf: [{ bsonType: 'double' }, { bsonType: 'int' }],
-                    description: 'Valor del producto devuelto'
+                    description: 'Valor del producto devuelto',
+                    minimum: 0
                 },
-                usuario: {
-                    bsonType: 'objectId',
+                id_usuario: {
+                    bsonType: 'int',
                     description: 'Id del usuario que devuelve el producto'
                 },
-                carrito: {
-                    bsonType: 'objectId',
+                id_carrito: {
+                    bsonType: 'int',
                     description: 'Id del carrito del cual fue pedido el producto'
                 },
-                devolucion: {
+                devoluciones_carrito: {
                     bsonType: 'array',
                     description: 'Array de la lista de productos devuelto por carrito',
                     minItems: 1,
                     items: {
                         bsonType: 'object',
-                        required: ['producto', 'cantidad', 'subtotal'],
+                        required: ['id_producto', 'cantidad', 'subtotal'],
                         properties: {
-                            producto: {
-                                bsonType: 'objectId',
+                            id_producto: {
+                                bsonType: 'int',
                                 description: 'Referencia al producto que se devolvio del carrito',
                             },
                             cantidad: {
                                 bsonType: 'int',
                                 description: 'Indica la cantidad de productos devueltos del carrito',
+                                minimum: 0
                             },
                             subtotal: {
                                 oneOf: [{ bsonType: 'double' }, { bsonType: 'int' }],
-                                description: 'Indica el subtotal generado de los productos devueltos del carrito'
+                                description: 'Indica el subtotal generado de los productos devueltos del carrito',
+                                minimum: 0
                             },
                         }
                     },

@@ -1,6 +1,5 @@
 use('Furniview');
-
-//db.Proveedores.deleteMany({});
+db.Proveedores.deleteMany({});
 //db.Carrito.deleteMany({});
 //db.Categorias.deleteMany({});
 //db.Envios.deleteMany({});
@@ -13,4 +12,4 @@ use('Furniview');
 //db.Ofertas.deleteMany({});
 //db.Productos.deleteMany({});
 //db.Resenas.deleteMany({});
-db.Usuarios.deleteMany({});
+//db.Usuarios.deleteMany({});
