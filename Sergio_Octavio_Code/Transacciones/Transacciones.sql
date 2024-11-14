@@ -9,7 +9,7 @@ select * from Resenas where Resenas.id = 1
 select * from Productos where Productos.id = 15
 
 -- Transaccion 2
--- Insertar o eliminar el carrito cambia el peso del carrito
+-- Eliminar el carrito cambia el subtotal y total del carrito
 begin transaction
 
 DELETE FROM Carrito_Producto WHERE id_carrito = 1 AND id_producto = 1;
@@ -31,7 +31,22 @@ commit
 select * from Envios where id_carrito = 1
 
 -- Transaccion 4
--- Agregar o eliminar en carrito y cambiar el total de pago
+-- Cambiar en carrito y cambia el total de pago
+begin transaction
+
+update Pagos set monto_total = (select coalesce(sum(subtotal), 0) from Carrito_Producto where id_carrito = 1) where id_carrito = 1;
+
+commit
+
+select * from Pagos where Pagos.id_carrito = 1
 
 -- Transaccion 5
--- Agregar o eliminar devoluciones cambiando el total de devoluciones
+-- Agregar devoluciones cambia el total de devoluciones
+begin transaction
+
+insert into Devoluciones_Carrito (cantidad, subtotal, id_devolucion, id_producto) values (1, 100, 1, 15);
+update Devoluciones set total = (select coalesce(sum(subtotal), 0) from Devoluciones_Carrito where id_devolucion = 1) where id = 1;
+
+commit
+
+select * from Devoluciones where Devoluciones.id_carrito = 1
