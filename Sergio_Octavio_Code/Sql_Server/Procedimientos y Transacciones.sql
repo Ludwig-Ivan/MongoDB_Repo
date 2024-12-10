@@ -1,9 +1,5 @@
 use Furniview
 
-SELECT * FROM Usuarios
-SELECT * FROM Carrito
-SELECT * FROM Carrito_Producto WHERE id_carrito = 6;
-
 -- | Proceso Almacenado de Devolucion de compra | ---
 -- Autor: Sergio Octavio Cervantes Mujica
 -- Fecha: 09/12/24
