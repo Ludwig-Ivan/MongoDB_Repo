@@ -14,7 +14,7 @@ use Furniview
 -- 6. Agregar el producto al carrito si no esta
 -- 7. Calcular y actualizar el total del carrito
 
-ALTER PROCEDURE GenerarCompra( 
+CREATE PROCEDURE GenerarCompra( 
     @_UsuarioId INT,
     @_ProductoId INT,
     @_Cantidad INT
